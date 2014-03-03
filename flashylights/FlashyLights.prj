@@ -1,0 +1,3 @@
+vhdl work "ipcore_dir/counter30.vhd"
+vhdl work "ipcore_dir/memory.vhd"
+vhdl work "FlashyLights.vhd"

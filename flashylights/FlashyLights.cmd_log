@@ -1,0 +1,48 @@
+xst -intstyle ise -ifn "/home/elli/Documents/flashylights/FlashyLights.xst" -ofn "/home/elli/Documents/flashylights/FlashyLights.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 FlashyLights.ngc FlashyLights.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FlashyLights_map.ncd FlashyLights.ngd FlashyLights.pcf 
+par -w -intstyle ise -ol high -mt off FlashyLights_map.ncd FlashyLights.ncd FlashyLights.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml FlashyLights.twx FlashyLights.ncd -o FlashyLights.twr FlashyLights.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f FlashyLights.ut FlashyLights.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/flashylights/FlashyLights.xst" -ofn "/home/elli/Documents/flashylights/FlashyLights.syr" 
+xst -intstyle ise -ifn "/home/elli/Documents/flashylights/FlashyLights.xst" -ofn "/home/elli/Documents/flashylights/FlashyLights.syr" 
+xst -intstyle ise -ifn "/home/elli/Documents/flashylights/FlashyLights.xst" -ofn "/home/elli/Documents/flashylights/FlashyLights.syr" 
+xst -intstyle ise -ifn "/home/elli/Documents/flashylights/FlashyLights.xst" -ofn "/home/elli/Documents/flashylights/FlashyLights.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 FlashyLights.ngc FlashyLights.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FlashyLights_map.ncd FlashyLights.ngd FlashyLights.pcf 
+par -w -intstyle ise -ol high -mt off FlashyLights_map.ncd FlashyLights.ncd FlashyLights.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml FlashyLights.twx FlashyLights.ncd -o FlashyLights.twr FlashyLights.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f FlashyLights.ut FlashyLights.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/flashylights/FlashyLights.xst" -ofn "/home/elli/Documents/flashylights/FlashyLights.syr" 
+xst -intstyle ise -ifn "/home/elli/Documents/flashylights/FlashyLights.xst" -ofn "/home/elli/Documents/flashylights/FlashyLights.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 FlashyLights.ngc FlashyLights.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FlashyLights_map.ncd FlashyLights.ngd FlashyLights.pcf 
+par -w -intstyle ise -ol high -mt off FlashyLights_map.ncd FlashyLights.ncd FlashyLights.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml FlashyLights.twx FlashyLights.ncd -o FlashyLights.twr FlashyLights.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f FlashyLights.ut FlashyLights.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 FlashyLights.ngc FlashyLights.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FlashyLights_map.ncd FlashyLights.ngd FlashyLights.pcf 
+par -w -intstyle ise -ol high -mt off FlashyLights_map.ncd FlashyLights.ncd FlashyLights.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml FlashyLights.twx FlashyLights.ncd -o FlashyLights.twr FlashyLights.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f FlashyLights.ut FlashyLights.ncd 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml FlashyLights_preroute.twx FlashyLights_map.ncd -o FlashyLights_preroute.twr FlashyLights.pcf -ucf constraints.ucf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 FlashyLights.ngc FlashyLights.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FlashyLights_map.ncd FlashyLights.ngd FlashyLights.pcf 
+par -w -intstyle ise -ol high -mt off FlashyLights_map.ncd FlashyLights.ncd FlashyLights.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml FlashyLights.twx FlashyLights.ncd -o FlashyLights.twr FlashyLights.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f FlashyLights.ut FlashyLights.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/flashylights/FlashyLights.xst" -ofn "/home/elli/Documents/flashylights/FlashyLights.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 FlashyLights.ngc FlashyLights.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FlashyLights_map.ncd FlashyLights.ngd FlashyLights.pcf 
+par -w -intstyle ise -ol high -mt off FlashyLights_map.ncd FlashyLights.ncd FlashyLights.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml FlashyLights.twx FlashyLights.ncd -o FlashyLights.twr FlashyLights.pcf -ucf constraints.ucf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 FlashyLights.ngc FlashyLights.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FlashyLights_map.ncd FlashyLights.ngd FlashyLights.pcf 
+par -w -intstyle ise -ol high -mt off FlashyLights_map.ncd FlashyLights.ncd FlashyLights.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml FlashyLights.twx FlashyLights.ncd -o FlashyLights.twr FlashyLights.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f FlashyLights.ut FlashyLights.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 FlashyLights.ngc FlashyLights.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FlashyLights_map.ncd FlashyLights.ngd FlashyLights.pcf 
+par -w -intstyle ise -ol high -mt off FlashyLights_map.ncd FlashyLights.ncd FlashyLights.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml FlashyLights.twx FlashyLights.ncd -o FlashyLights.twr FlashyLights.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f FlashyLights.ut FlashyLights.ncd 

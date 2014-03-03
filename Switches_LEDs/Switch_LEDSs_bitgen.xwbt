@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/elli/Documents/Switches_LEDs/Switch_LEDSs.ncd
+OUTFILE=/home/elli/Documents/Switches_LEDs/Switch_LEDSs.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/elli/Documents/Switches_LEDs
+LICENSE=ISE
+USER_INFO=210849933_0_0_162

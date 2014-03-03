@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/elli/Documents/flashylights/FlashyLights.ncd
+OUTFILE=/home/elli/Documents/flashylights/FlashyLights.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/elli/Documents/flashylights
+LICENSE=ISE
+USER_INFO=210849933_0_0_162

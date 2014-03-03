@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "/home/elli/Documents/Switches_LEDs/Switch_LEDSs.xst" -ofn "/home/elli/Documents/Switches_LEDs/Switch_LEDSs.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-csg225-3N Switch_LEDSs.ngc Switch_LEDSs.ngd  
+map -intstyle ise -p xc6slx9-csg225-3N -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Switch_LEDSs_map.ncd Switch_LEDSs.ngd Switch_LEDSs.pcf 
+par -w -intstyle ise -ol high -mt off Switch_LEDSs_map.ncd Switch_LEDSs.ncd Switch_LEDSs.pcf 
+trce -intstyle ise -v 3 -s 3N -n 3 -fastpaths -xml Switch_LEDSs.twx Switch_LEDSs.ncd -o Switch_LEDSs.twr Switch_LEDSs.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-csg225-3N Switch_LEDSs.ngc Switch_LEDSs.ngd  
+map -intstyle ise -p xc6slx9-csg225-3N -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Switch_LEDSs_map.ncd Switch_LEDSs.ngd Switch_LEDSs.pcf 
+par -w -intstyle ise -ol high -mt off Switch_LEDSs_map.ncd Switch_LEDSs.ncd Switch_LEDSs.pcf 
+trce -intstyle ise -v 3 -s 3N -n 3 -fastpaths -xml Switch_LEDSs.twx Switch_LEDSs.ncd -o Switch_LEDSs.twr Switch_LEDSs.pcf 
+bitgen -intstyle ise -f Switch_LEDSs.ut Switch_LEDSs.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx9-csg225-3N Switch_LEDSs.ngc Switch_LEDSs.ngd  
+map -intstyle ise -p xc6slx9-csg225-3N -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Switch_LEDSs_map.ncd Switch_LEDSs.ngd Switch_LEDSs.pcf 
+xst -intstyle ise -ifn "/home/elli/Documents/Switches_LEDs/Switch_LEDSs.xst" -ofn "/home/elli/Documents/Switches_LEDs/Switch_LEDSs.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 Switch_LEDSs.ngc Switch_LEDSs.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Switch_LEDSs_map.ncd Switch_LEDSs.ngd Switch_LEDSs.pcf 
+par -w -intstyle ise -ol high -mt off Switch_LEDSs_map.ncd Switch_LEDSs.ncd Switch_LEDSs.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml Switch_LEDSs.twx Switch_LEDSs.ncd -o Switch_LEDSs.twr Switch_LEDSs.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f Switch_LEDSs.ut Switch_LEDSs.ncd 
