@@ -1,0 +1,8 @@
+Release 14.7 Drc P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Sun Mar  9 23:57:29 2014
+
+drc -z fir_4tap.ncd fir_4tap.pcf
+
+DRC detected 0 errors and 0 warnings.
