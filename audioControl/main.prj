@@ -1,0 +1,6 @@
+vhdl work "ipcore_dir/FIR.vhd"
+vhdl work "ipcore_dir/musicStorage.vhd"
+vhdl work "Signed2Logic.vhd"
+vhdl work "MyDac.vhd"
+vhdl work "Logic2Signed.vhd"
+vhdl work "main.vhd"

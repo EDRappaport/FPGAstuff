@@ -1,0 +1,1923 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'main'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+Target Device  : xc6slx9
+Target Package : tqg144
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Wed Apr  2 15:22:05 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    2
+Slice Logic Utilization:
+  Number of Slice Registers:                   966 out of  11,440    8%
+    Number used as Flip Flops:                 950
+    Number used as Latches:                     16
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        847 out of   5,720   14%
+    Number used as logic:                      465 out of   5,720    8%
+      Number using O6 output only:             324
+      Number using O5 output only:              19
+      Number using O5 and O6:                  122
+      Number used as ROM:                        0
+    Number used as Memory:                     116 out of   1,440    8%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:           116
+        Number using O6 output only:            40
+        Number using O5 output only:             0
+        Number using O5 and O6:                 76
+    Number used exclusively as route-thrus:    266
+      Number with same-slice register load:      1
+      Number with same-slice carry load:       265
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   320 out of   1,430   22%
+  Number of MUXCYs used:                       832 out of   2,860   29%
+  Number of LUT Flip Flop pairs used:          877
+    Number with an unused Flip Flop:            67 out of     877    7%
+    Number with an unused LUT:                  30 out of     877    3%
+    Number of fully used LUT-FF pairs:         780 out of     877   88%
+    Number of unique control sets:              14
+    Number of slice register sites lost
+      to control set restrictions:              74 out of  11,440    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        14 out of     102   13%
+    Number of LOCed IOBs:                       14 out of      14  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        28 out of      32   87%
+  Number of RAMB8BWERs:                          1 out of      64    1%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
+    Number used as BUFGs:                        1
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     200    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                           12 out of      16   75%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                2.43
+
+Peak Memory Usage:  687 MB
+Total REAL time to MAP completion:  26 secs 
+Total CPU time to MAP completion:   20 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net rfd[11]_PWR_6_o_equal_14_o
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network filter11/rdy has no load.
+INFO:LIT:395 - The above info message is repeated 83 more times for the
+   following (max. 5 shown):
+   filter11/blk00000003/blk0000000a/LO,
+   filter11/blk00000003/blk0000002c/LO,
+   filter11/blk00000003/blk0000003d/LO,
+   filter11/blk00000003/blk00000046/LO,
+   filter11/blk00000003/blk00000050/LO
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 612 block(s) removed
+  80 block(s) optimized away
+ 769 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "filter0/blk00000003/blk0000000b" (MUX) removed.
+Loadless block "filter0/blk00000003/blk0000000f" (SFF) removed.
+Loadless block "filter1/blk00000003/blk0000000b" (MUX) removed.
+Loadless block "filter1/blk00000003/blk0000000f" (SFF) removed.
+Loadless block "filter10/blk00000003/blk0000000b" (MUX) removed.
+Loadless block "filter10/blk00000003/blk0000000f" (SFF) removed.
+Loadless block "filter11/blk00000003/blk0000000b" (MUX) removed.
+Loadless block "filter11/blk00000003/blk0000000f" (SFF) removed.
+Loadless block "filter2/blk00000003/blk0000000b" (MUX) removed.
+Loadless block "filter2/blk00000003/blk0000000f" (SFF) removed.
+Loadless block "filter3/blk00000003/blk0000000b" (MUX) removed.
+Loadless block "filter3/blk00000003/blk0000000f" (SFF) removed.
+Loadless block "filter4/blk00000003/blk0000000b" (MUX) removed.
+Loadless block "filter4/blk00000003/blk0000000f" (SFF) removed.
+Loadless block "filter5/blk00000003/blk0000000b" (MUX) removed.
+Loadless block "filter5/blk00000003/blk0000000f" (SFF) removed.
+Loadless block "filter6/blk00000003/blk0000000b" (MUX) removed.
+Loadless block "filter6/blk00000003/blk0000000f" (SFF) removed.
+Loadless block "filter7/blk00000003/blk0000000b" (MUX) removed.
+Loadless block "filter7/blk00000003/blk0000000f" (SFF) removed.
+Loadless block "filter8/blk00000003/blk0000000b" (MUX) removed.
+Loadless block "filter8/blk00000003/blk0000000f" (SFF) removed.
+Loadless block "filter9/blk00000003/blk0000000b" (MUX) removed.
+Loadless block "filter9/blk00000003/blk0000000f" (SFF) removed.
+The signal "Zelda/N0" is sourceless and has been removed.
+The signal "filter11/rdy" is sourceless and has been removed.
+The signal "filter11/dout<24>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk000000aa" (ROM) removed.
+  The signal "filter11/blk00000003/sig0000011c" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk0000007b" (SFF) removed.
+The signal "filter11/dout<23>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk000000a9" (ROM) removed.
+  The signal "filter11/blk00000003/sig0000011b" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk0000007a" (SFF) removed.
+The signal "filter11/dout<22>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk000000a7" (ROM) removed.
+  The signal "filter11/blk00000003/sig0000011a" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk00000079" (SFF) removed.
+The signal "filter11/dout<21>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk000000a8" (ROM) removed.
+  The signal "filter11/blk00000003/sig00000119" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk00000078" (SFF) removed.
+The signal "filter11/dout<20>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk000000a6" (ROM) removed.
+  The signal "filter11/blk00000003/sig00000118" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk00000077" (SFF) removed.
+The signal "filter11/dout<19>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk000000a5" (ROM) removed.
+  The signal "filter11/blk00000003/sig00000117" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk00000076" (SFF) removed.
+The signal "filter11/dout<18>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk000000a4" (ROM) removed.
+  The signal "filter11/blk00000003/sig00000116" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk00000075" (SFF) removed.
+The signal "filter11/dout<17>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk000000a2" (ROM) removed.
+  The signal "filter11/blk00000003/sig00000115" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk00000074" (SFF) removed.
+The signal "filter11/dout<16>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk000000a3" (ROM) removed.
+  The signal "filter11/blk00000003/sig00000114" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk00000073" (SFF) removed.
+The signal "filter11/dout<15>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk000000a1" (ROM) removed.
+  The signal "filter11/blk00000003/sig00000113" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk00000072" (SFF) removed.
+The signal "filter11/dout<14>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk0000009f" (ROM) removed.
+  The signal "filter11/blk00000003/sig00000112" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk00000071" (SFF) removed.
+The signal "filter11/dout<13>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk000000a0" (ROM) removed.
+  The signal "filter11/blk00000003/sig00000111" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk00000070" (SFF) removed.
+The signal "filter11/dout<12>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk0000009e" (ROM) removed.
+  The signal "filter11/blk00000003/sig00000110" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk0000006f" (SFF) removed.
+The signal "filter11/dout<11>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk0000009d" (ROM) removed.
+  The signal "filter11/blk00000003/sig0000010f" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk0000006e" (SFF) removed.
+The signal "filter11/dout<10>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk0000009c" (ROM) removed.
+  The signal "filter11/blk00000003/sig0000010e" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk0000006d" (SFF) removed.
+The signal "filter11/dout<9>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk0000009a" (ROM) removed.
+  The signal "filter11/blk00000003/sig0000010d" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk0000006c" (SFF) removed.
+The signal "filter11/dout<8>" is sourceless and has been removed.
+ Sourceless block "filter11/blk00000003/blk0000009b" (ROM) removed.
+  The signal "filter11/blk00000003/sig0000010c" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk0000006b" (SFF) removed.
+The signal "filter11/blk00000003/sig0000000f" is sourceless and has been
+removed.
+ Sourceless block "filter11/blk00000003/blk000000ab" (ROM) removed.
+  The signal "filter11/blk00000003/sig0000011d" is sourceless and has been
+removed.
+   Sourceless block "filter11/blk00000003/blk0000007c" (SFF) removed.
+The signal "filter11/blk00000003/sig00000034" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig00000035" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig00000036" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig00000037" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig00000038" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig00000039" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig0000003a" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig0000003b" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig0000003c" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig0000003d" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig0000003e" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig0000003f" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig00000040" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig00000041" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig00000042" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig00000043" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/sig00000044" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/blk0000000a/LO" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/blk0000002c/LO" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/blk0000002c/O" is sourceless and has been
+removed.
+ Sourceless block "filter11/blk00000003/blk0000002c/MUXCY_D_BUF" (BUF) removed.
+The signal "filter11/blk00000003/blk0000003d/LO" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/blk00000046/LO" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/blk00000046/O" is sourceless and has been
+removed.
+ Sourceless block "filter11/blk00000003/blk00000046/MUXCY_D_BUF" (BUF) removed.
+The signal "filter11/blk00000003/blk00000050/LO" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/blk00000050/O" is sourceless and has been
+removed.
+ Sourceless block "filter11/blk00000003/blk00000050/MUXCY_D_BUF" (BUF) removed.
+The signal "filter11/blk00000003/blk00000059/LO" is sourceless and has been
+removed.
+The signal "filter11/blk00000003/blk00000059/O" is sourceless and has been
+removed.
+ Sourceless block "filter11/blk00000003/blk00000059/MUXCY_D_BUF" (BUF) removed.
+The signal "filter10/rdy" is sourceless and has been removed.
+The signal "filter10/dout<24>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk000000aa" (ROM) removed.
+  The signal "filter10/blk00000003/sig0000011c" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk0000007b" (SFF) removed.
+The signal "filter10/dout<23>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk000000a9" (ROM) removed.
+  The signal "filter10/blk00000003/sig0000011b" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk0000007a" (SFF) removed.
+The signal "filter10/dout<22>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk000000a7" (ROM) removed.
+  The signal "filter10/blk00000003/sig0000011a" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk00000079" (SFF) removed.
+The signal "filter10/dout<21>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk000000a8" (ROM) removed.
+  The signal "filter10/blk00000003/sig00000119" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk00000078" (SFF) removed.
+The signal "filter10/dout<20>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk000000a6" (ROM) removed.
+  The signal "filter10/blk00000003/sig00000118" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk00000077" (SFF) removed.
+The signal "filter10/dout<19>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk000000a5" (ROM) removed.
+  The signal "filter10/blk00000003/sig00000117" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk00000076" (SFF) removed.
+The signal "filter10/dout<18>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk000000a4" (ROM) removed.
+  The signal "filter10/blk00000003/sig00000116" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk00000075" (SFF) removed.
+The signal "filter10/dout<17>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk000000a2" (ROM) removed.
+  The signal "filter10/blk00000003/sig00000115" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk00000074" (SFF) removed.
+The signal "filter10/dout<16>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk000000a3" (ROM) removed.
+  The signal "filter10/blk00000003/sig00000114" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk00000073" (SFF) removed.
+The signal "filter10/dout<15>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk000000a1" (ROM) removed.
+  The signal "filter10/blk00000003/sig00000113" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk00000072" (SFF) removed.
+The signal "filter10/dout<14>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk0000009f" (ROM) removed.
+  The signal "filter10/blk00000003/sig00000112" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk00000071" (SFF) removed.
+The signal "filter10/dout<13>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk000000a0" (ROM) removed.
+  The signal "filter10/blk00000003/sig00000111" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk00000070" (SFF) removed.
+The signal "filter10/dout<12>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk0000009e" (ROM) removed.
+  The signal "filter10/blk00000003/sig00000110" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk0000006f" (SFF) removed.
+The signal "filter10/dout<11>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk0000009d" (ROM) removed.
+  The signal "filter10/blk00000003/sig0000010f" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk0000006e" (SFF) removed.
+The signal "filter10/dout<10>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk0000009c" (ROM) removed.
+  The signal "filter10/blk00000003/sig0000010e" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk0000006d" (SFF) removed.
+The signal "filter10/dout<9>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk0000009a" (ROM) removed.
+  The signal "filter10/blk00000003/sig0000010d" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk0000006c" (SFF) removed.
+The signal "filter10/dout<8>" is sourceless and has been removed.
+ Sourceless block "filter10/blk00000003/blk0000009b" (ROM) removed.
+  The signal "filter10/blk00000003/sig0000010c" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk0000006b" (SFF) removed.
+The signal "filter10/blk00000003/sig0000000f" is sourceless and has been
+removed.
+ Sourceless block "filter10/blk00000003/blk000000ab" (ROM) removed.
+  The signal "filter10/blk00000003/sig0000011d" is sourceless and has been
+removed.
+   Sourceless block "filter10/blk00000003/blk0000007c" (SFF) removed.
+The signal "filter10/blk00000003/sig00000034" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig00000035" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig00000036" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig00000037" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig00000038" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig00000039" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig0000003a" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig0000003b" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig0000003c" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig0000003d" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig0000003e" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig0000003f" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig00000040" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig00000041" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig00000042" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig00000043" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/sig00000044" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/blk0000000a/LO" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/blk0000002c/LO" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/blk0000002c/O" is sourceless and has been
+removed.
+ Sourceless block "filter10/blk00000003/blk0000002c/MUXCY_D_BUF" (BUF) removed.
+The signal "filter10/blk00000003/blk0000003d/LO" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/blk00000046/LO" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/blk00000046/O" is sourceless and has been
+removed.
+ Sourceless block "filter10/blk00000003/blk00000046/MUXCY_D_BUF" (BUF) removed.
+The signal "filter10/blk00000003/blk00000050/LO" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/blk00000050/O" is sourceless and has been
+removed.
+ Sourceless block "filter10/blk00000003/blk00000050/MUXCY_D_BUF" (BUF) removed.
+The signal "filter10/blk00000003/blk00000059/LO" is sourceless and has been
+removed.
+The signal "filter10/blk00000003/blk00000059/O" is sourceless and has been
+removed.
+ Sourceless block "filter10/blk00000003/blk00000059/MUXCY_D_BUF" (BUF) removed.
+The signal "filter9/rdy" is sourceless and has been removed.
+The signal "filter9/dout<24>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk000000aa" (ROM) removed.
+  The signal "filter9/blk00000003/sig0000011c" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk0000007b" (SFF) removed.
+The signal "filter9/dout<23>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk000000a9" (ROM) removed.
+  The signal "filter9/blk00000003/sig0000011b" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk0000007a" (SFF) removed.
+The signal "filter9/dout<22>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk000000a7" (ROM) removed.
+  The signal "filter9/blk00000003/sig0000011a" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk00000079" (SFF) removed.
+The signal "filter9/dout<21>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk000000a8" (ROM) removed.
+  The signal "filter9/blk00000003/sig00000119" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk00000078" (SFF) removed.
+The signal "filter9/dout<20>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk000000a6" (ROM) removed.
+  The signal "filter9/blk00000003/sig00000118" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk00000077" (SFF) removed.
+The signal "filter9/dout<19>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk000000a5" (ROM) removed.
+  The signal "filter9/blk00000003/sig00000117" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk00000076" (SFF) removed.
+The signal "filter9/dout<18>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk000000a4" (ROM) removed.
+  The signal "filter9/blk00000003/sig00000116" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk00000075" (SFF) removed.
+The signal "filter9/dout<17>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk000000a2" (ROM) removed.
+  The signal "filter9/blk00000003/sig00000115" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk00000074" (SFF) removed.
+The signal "filter9/dout<16>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk000000a3" (ROM) removed.
+  The signal "filter9/blk00000003/sig00000114" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk00000073" (SFF) removed.
+The signal "filter9/dout<15>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk000000a1" (ROM) removed.
+  The signal "filter9/blk00000003/sig00000113" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk00000072" (SFF) removed.
+The signal "filter9/dout<14>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk0000009f" (ROM) removed.
+  The signal "filter9/blk00000003/sig00000112" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk00000071" (SFF) removed.
+The signal "filter9/dout<13>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk000000a0" (ROM) removed.
+  The signal "filter9/blk00000003/sig00000111" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk00000070" (SFF) removed.
+The signal "filter9/dout<12>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk0000009e" (ROM) removed.
+  The signal "filter9/blk00000003/sig00000110" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk0000006f" (SFF) removed.
+The signal "filter9/dout<11>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk0000009d" (ROM) removed.
+  The signal "filter9/blk00000003/sig0000010f" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk0000006e" (SFF) removed.
+The signal "filter9/dout<10>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk0000009c" (ROM) removed.
+  The signal "filter9/blk00000003/sig0000010e" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk0000006d" (SFF) removed.
+The signal "filter9/dout<9>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk0000009a" (ROM) removed.
+  The signal "filter9/blk00000003/sig0000010d" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk0000006c" (SFF) removed.
+The signal "filter9/dout<8>" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk0000009b" (ROM) removed.
+  The signal "filter9/blk00000003/sig0000010c" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk0000006b" (SFF) removed.
+The signal "filter9/blk00000003/sig0000000f" is sourceless and has been removed.
+ Sourceless block "filter9/blk00000003/blk000000ab" (ROM) removed.
+  The signal "filter9/blk00000003/sig0000011d" is sourceless and has been removed.
+   Sourceless block "filter9/blk00000003/blk0000007c" (SFF) removed.
+The signal "filter9/blk00000003/sig00000034" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig00000035" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig00000036" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig00000037" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig00000038" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig00000039" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig0000003a" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig0000003b" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig0000003c" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig0000003d" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig0000003e" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig0000003f" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig00000040" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig00000041" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig00000042" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig00000043" is sourceless and has been removed.
+The signal "filter9/blk00000003/sig00000044" is sourceless and has been removed.
+The signal "filter9/blk00000003/blk0000000a/LO" is sourceless and has been
+removed.
+The signal "filter9/blk00000003/blk0000002c/LO" is sourceless and has been
+removed.
+The signal "filter9/blk00000003/blk0000002c/O" is sourceless and has been
+removed.
+ Sourceless block "filter9/blk00000003/blk0000002c/MUXCY_D_BUF" (BUF) removed.
+The signal "filter9/blk00000003/blk0000003d/LO" is sourceless and has been
+removed.
+The signal "filter9/blk00000003/blk00000046/LO" is sourceless and has been
+removed.
+The signal "filter9/blk00000003/blk00000046/O" is sourceless and has been
+removed.
+ Sourceless block "filter9/blk00000003/blk00000046/MUXCY_D_BUF" (BUF) removed.
+The signal "filter9/blk00000003/blk00000050/LO" is sourceless and has been
+removed.
+The signal "filter9/blk00000003/blk00000050/O" is sourceless and has been
+removed.
+ Sourceless block "filter9/blk00000003/blk00000050/MUXCY_D_BUF" (BUF) removed.
+The signal "filter9/blk00000003/blk00000059/LO" is sourceless and has been
+removed.
+The signal "filter9/blk00000003/blk00000059/O" is sourceless and has been
+removed.
+ Sourceless block "filter9/blk00000003/blk00000059/MUXCY_D_BUF" (BUF) removed.
+The signal "filter8/rdy" is sourceless and has been removed.
+The signal "filter8/dout<24>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk000000aa" (ROM) removed.
+  The signal "filter8/blk00000003/sig0000011c" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk0000007b" (SFF) removed.
+The signal "filter8/dout<23>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk000000a9" (ROM) removed.
+  The signal "filter8/blk00000003/sig0000011b" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk0000007a" (SFF) removed.
+The signal "filter8/dout<22>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk000000a7" (ROM) removed.
+  The signal "filter8/blk00000003/sig0000011a" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk00000079" (SFF) removed.
+The signal "filter8/dout<21>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk000000a8" (ROM) removed.
+  The signal "filter8/blk00000003/sig00000119" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk00000078" (SFF) removed.
+The signal "filter8/dout<20>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk000000a6" (ROM) removed.
+  The signal "filter8/blk00000003/sig00000118" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk00000077" (SFF) removed.
+The signal "filter8/dout<19>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk000000a5" (ROM) removed.
+  The signal "filter8/blk00000003/sig00000117" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk00000076" (SFF) removed.
+The signal "filter8/dout<18>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk000000a4" (ROM) removed.
+  The signal "filter8/blk00000003/sig00000116" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk00000075" (SFF) removed.
+The signal "filter8/dout<17>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk000000a2" (ROM) removed.
+  The signal "filter8/blk00000003/sig00000115" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk00000074" (SFF) removed.
+The signal "filter8/dout<16>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk000000a3" (ROM) removed.
+  The signal "filter8/blk00000003/sig00000114" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk00000073" (SFF) removed.
+The signal "filter8/dout<15>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk000000a1" (ROM) removed.
+  The signal "filter8/blk00000003/sig00000113" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk00000072" (SFF) removed.
+The signal "filter8/dout<14>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk0000009f" (ROM) removed.
+  The signal "filter8/blk00000003/sig00000112" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk00000071" (SFF) removed.
+The signal "filter8/dout<13>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk000000a0" (ROM) removed.
+  The signal "filter8/blk00000003/sig00000111" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk00000070" (SFF) removed.
+The signal "filter8/dout<12>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk0000009e" (ROM) removed.
+  The signal "filter8/blk00000003/sig00000110" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk0000006f" (SFF) removed.
+The signal "filter8/dout<11>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk0000009d" (ROM) removed.
+  The signal "filter8/blk00000003/sig0000010f" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk0000006e" (SFF) removed.
+The signal "filter8/dout<10>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk0000009c" (ROM) removed.
+  The signal "filter8/blk00000003/sig0000010e" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk0000006d" (SFF) removed.
+The signal "filter8/dout<9>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk0000009a" (ROM) removed.
+  The signal "filter8/blk00000003/sig0000010d" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk0000006c" (SFF) removed.
+The signal "filter8/dout<8>" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk0000009b" (ROM) removed.
+  The signal "filter8/blk00000003/sig0000010c" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk0000006b" (SFF) removed.
+The signal "filter8/blk00000003/sig0000000f" is sourceless and has been removed.
+ Sourceless block "filter8/blk00000003/blk000000ab" (ROM) removed.
+  The signal "filter8/blk00000003/sig0000011d" is sourceless and has been removed.
+   Sourceless block "filter8/blk00000003/blk0000007c" (SFF) removed.
+The signal "filter8/blk00000003/sig00000034" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig00000035" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig00000036" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig00000037" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig00000038" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig00000039" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig0000003a" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig0000003b" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig0000003c" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig0000003d" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig0000003e" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig0000003f" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig00000040" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig00000041" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig00000042" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig00000043" is sourceless and has been removed.
+The signal "filter8/blk00000003/sig00000044" is sourceless and has been removed.
+The signal "filter8/blk00000003/blk0000000a/LO" is sourceless and has been
+removed.
+The signal "filter8/blk00000003/blk0000002c/LO" is sourceless and has been
+removed.
+The signal "filter8/blk00000003/blk0000002c/O" is sourceless and has been
+removed.
+ Sourceless block "filter8/blk00000003/blk0000002c/MUXCY_D_BUF" (BUF) removed.
+The signal "filter8/blk00000003/blk0000003d/LO" is sourceless and has been
+removed.
+The signal "filter8/blk00000003/blk00000046/LO" is sourceless and has been
+removed.
+The signal "filter8/blk00000003/blk00000046/O" is sourceless and has been
+removed.
+ Sourceless block "filter8/blk00000003/blk00000046/MUXCY_D_BUF" (BUF) removed.
+The signal "filter8/blk00000003/blk00000050/LO" is sourceless and has been
+removed.
+The signal "filter8/blk00000003/blk00000050/O" is sourceless and has been
+removed.
+ Sourceless block "filter8/blk00000003/blk00000050/MUXCY_D_BUF" (BUF) removed.
+The signal "filter8/blk00000003/blk00000059/LO" is sourceless and has been
+removed.
+The signal "filter8/blk00000003/blk00000059/O" is sourceless and has been
+removed.
+ Sourceless block "filter8/blk00000003/blk00000059/MUXCY_D_BUF" (BUF) removed.
+The signal "filter7/rdy" is sourceless and has been removed.
+The signal "filter7/dout<24>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk000000aa" (ROM) removed.
+  The signal "filter7/blk00000003/sig0000011c" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk0000007b" (SFF) removed.
+The signal "filter7/dout<23>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk000000a9" (ROM) removed.
+  The signal "filter7/blk00000003/sig0000011b" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk0000007a" (SFF) removed.
+The signal "filter7/dout<22>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk000000a7" (ROM) removed.
+  The signal "filter7/blk00000003/sig0000011a" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk00000079" (SFF) removed.
+The signal "filter7/dout<21>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk000000a8" (ROM) removed.
+  The signal "filter7/blk00000003/sig00000119" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk00000078" (SFF) removed.
+The signal "filter7/dout<20>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk000000a6" (ROM) removed.
+  The signal "filter7/blk00000003/sig00000118" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk00000077" (SFF) removed.
+The signal "filter7/dout<19>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk000000a5" (ROM) removed.
+  The signal "filter7/blk00000003/sig00000117" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk00000076" (SFF) removed.
+The signal "filter7/dout<18>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk000000a4" (ROM) removed.
+  The signal "filter7/blk00000003/sig00000116" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk00000075" (SFF) removed.
+The signal "filter7/dout<17>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk000000a2" (ROM) removed.
+  The signal "filter7/blk00000003/sig00000115" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk00000074" (SFF) removed.
+The signal "filter7/dout<16>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk000000a3" (ROM) removed.
+  The signal "filter7/blk00000003/sig00000114" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk00000073" (SFF) removed.
+The signal "filter7/dout<15>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk000000a1" (ROM) removed.
+  The signal "filter7/blk00000003/sig00000113" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk00000072" (SFF) removed.
+The signal "filter7/dout<14>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk0000009f" (ROM) removed.
+  The signal "filter7/blk00000003/sig00000112" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk00000071" (SFF) removed.
+The signal "filter7/dout<13>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk000000a0" (ROM) removed.
+  The signal "filter7/blk00000003/sig00000111" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk00000070" (SFF) removed.
+The signal "filter7/dout<12>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk0000009e" (ROM) removed.
+  The signal "filter7/blk00000003/sig00000110" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk0000006f" (SFF) removed.
+The signal "filter7/dout<11>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk0000009d" (ROM) removed.
+  The signal "filter7/blk00000003/sig0000010f" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk0000006e" (SFF) removed.
+The signal "filter7/dout<10>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk0000009c" (ROM) removed.
+  The signal "filter7/blk00000003/sig0000010e" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk0000006d" (SFF) removed.
+The signal "filter7/dout<9>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk0000009a" (ROM) removed.
+  The signal "filter7/blk00000003/sig0000010d" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk0000006c" (SFF) removed.
+The signal "filter7/dout<8>" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk0000009b" (ROM) removed.
+  The signal "filter7/blk00000003/sig0000010c" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk0000006b" (SFF) removed.
+The signal "filter7/blk00000003/sig0000000f" is sourceless and has been removed.
+ Sourceless block "filter7/blk00000003/blk000000ab" (ROM) removed.
+  The signal "filter7/blk00000003/sig0000011d" is sourceless and has been removed.
+   Sourceless block "filter7/blk00000003/blk0000007c" (SFF) removed.
+The signal "filter7/blk00000003/sig00000034" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig00000035" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig00000036" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig00000037" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig00000038" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig00000039" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig0000003a" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig0000003b" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig0000003c" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig0000003d" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig0000003e" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig0000003f" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig00000040" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig00000041" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig00000042" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig00000043" is sourceless and has been removed.
+The signal "filter7/blk00000003/sig00000044" is sourceless and has been removed.
+The signal "filter7/blk00000003/blk0000000a/LO" is sourceless and has been
+removed.
+The signal "filter7/blk00000003/blk0000002c/LO" is sourceless and has been
+removed.
+The signal "filter7/blk00000003/blk0000002c/O" is sourceless and has been
+removed.
+ Sourceless block "filter7/blk00000003/blk0000002c/MUXCY_D_BUF" (BUF) removed.
+The signal "filter7/blk00000003/blk0000003d/LO" is sourceless and has been
+removed.
+The signal "filter7/blk00000003/blk00000046/LO" is sourceless and has been
+removed.
+The signal "filter7/blk00000003/blk00000046/O" is sourceless and has been
+removed.
+ Sourceless block "filter7/blk00000003/blk00000046/MUXCY_D_BUF" (BUF) removed.
+The signal "filter7/blk00000003/blk00000050/LO" is sourceless and has been
+removed.
+The signal "filter7/blk00000003/blk00000050/O" is sourceless and has been
+removed.
+ Sourceless block "filter7/blk00000003/blk00000050/MUXCY_D_BUF" (BUF) removed.
+The signal "filter7/blk00000003/blk00000059/LO" is sourceless and has been
+removed.
+The signal "filter7/blk00000003/blk00000059/O" is sourceless and has been
+removed.
+ Sourceless block "filter7/blk00000003/blk00000059/MUXCY_D_BUF" (BUF) removed.
+The signal "filter6/rdy" is sourceless and has been removed.
+The signal "filter6/dout<24>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk000000aa" (ROM) removed.
+  The signal "filter6/blk00000003/sig0000011c" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk0000007b" (SFF) removed.
+The signal "filter6/dout<23>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk000000a9" (ROM) removed.
+  The signal "filter6/blk00000003/sig0000011b" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk0000007a" (SFF) removed.
+The signal "filter6/dout<22>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk000000a7" (ROM) removed.
+  The signal "filter6/blk00000003/sig0000011a" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk00000079" (SFF) removed.
+The signal "filter6/dout<21>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk000000a8" (ROM) removed.
+  The signal "filter6/blk00000003/sig00000119" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk00000078" (SFF) removed.
+The signal "filter6/dout<20>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk000000a6" (ROM) removed.
+  The signal "filter6/blk00000003/sig00000118" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk00000077" (SFF) removed.
+The signal "filter6/dout<19>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk000000a5" (ROM) removed.
+  The signal "filter6/blk00000003/sig00000117" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk00000076" (SFF) removed.
+The signal "filter6/dout<18>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk000000a4" (ROM) removed.
+  The signal "filter6/blk00000003/sig00000116" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk00000075" (SFF) removed.
+The signal "filter6/dout<17>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk000000a2" (ROM) removed.
+  The signal "filter6/blk00000003/sig00000115" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk00000074" (SFF) removed.
+The signal "filter6/dout<16>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk000000a3" (ROM) removed.
+  The signal "filter6/blk00000003/sig00000114" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk00000073" (SFF) removed.
+The signal "filter6/dout<15>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk000000a1" (ROM) removed.
+  The signal "filter6/blk00000003/sig00000113" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk00000072" (SFF) removed.
+The signal "filter6/dout<14>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk0000009f" (ROM) removed.
+  The signal "filter6/blk00000003/sig00000112" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk00000071" (SFF) removed.
+The signal "filter6/dout<13>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk000000a0" (ROM) removed.
+  The signal "filter6/blk00000003/sig00000111" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk00000070" (SFF) removed.
+The signal "filter6/dout<12>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk0000009e" (ROM) removed.
+  The signal "filter6/blk00000003/sig00000110" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk0000006f" (SFF) removed.
+The signal "filter6/dout<11>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk0000009d" (ROM) removed.
+  The signal "filter6/blk00000003/sig0000010f" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk0000006e" (SFF) removed.
+The signal "filter6/dout<10>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk0000009c" (ROM) removed.
+  The signal "filter6/blk00000003/sig0000010e" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk0000006d" (SFF) removed.
+The signal "filter6/dout<9>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk0000009a" (ROM) removed.
+  The signal "filter6/blk00000003/sig0000010d" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk0000006c" (SFF) removed.
+The signal "filter6/dout<8>" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk0000009b" (ROM) removed.
+  The signal "filter6/blk00000003/sig0000010c" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk0000006b" (SFF) removed.
+The signal "filter6/blk00000003/sig0000000f" is sourceless and has been removed.
+ Sourceless block "filter6/blk00000003/blk000000ab" (ROM) removed.
+  The signal "filter6/blk00000003/sig0000011d" is sourceless and has been removed.
+   Sourceless block "filter6/blk00000003/blk0000007c" (SFF) removed.
+The signal "filter6/blk00000003/sig00000034" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig00000035" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig00000036" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig00000037" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig00000038" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig00000039" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig0000003a" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig0000003b" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig0000003c" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig0000003d" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig0000003e" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig0000003f" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig00000040" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig00000041" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig00000042" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig00000043" is sourceless and has been removed.
+The signal "filter6/blk00000003/sig00000044" is sourceless and has been removed.
+The signal "filter6/blk00000003/blk0000000a/LO" is sourceless and has been
+removed.
+The signal "filter6/blk00000003/blk0000002c/LO" is sourceless and has been
+removed.
+The signal "filter6/blk00000003/blk0000002c/O" is sourceless and has been
+removed.
+ Sourceless block "filter6/blk00000003/blk0000002c/MUXCY_D_BUF" (BUF) removed.
+The signal "filter6/blk00000003/blk0000003d/LO" is sourceless and has been
+removed.
+The signal "filter6/blk00000003/blk00000046/LO" is sourceless and has been
+removed.
+The signal "filter6/blk00000003/blk00000046/O" is sourceless and has been
+removed.
+ Sourceless block "filter6/blk00000003/blk00000046/MUXCY_D_BUF" (BUF) removed.
+The signal "filter6/blk00000003/blk00000050/LO" is sourceless and has been
+removed.
+The signal "filter6/blk00000003/blk00000050/O" is sourceless and has been
+removed.
+ Sourceless block "filter6/blk00000003/blk00000050/MUXCY_D_BUF" (BUF) removed.
+The signal "filter6/blk00000003/blk00000059/LO" is sourceless and has been
+removed.
+The signal "filter6/blk00000003/blk00000059/O" is sourceless and has been
+removed.
+ Sourceless block "filter6/blk00000003/blk00000059/MUXCY_D_BUF" (BUF) removed.
+The signal "filter5/rdy" is sourceless and has been removed.
+The signal "filter5/dout<24>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk000000aa" (ROM) removed.
+  The signal "filter5/blk00000003/sig0000011c" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk0000007b" (SFF) removed.
+The signal "filter5/dout<23>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk000000a9" (ROM) removed.
+  The signal "filter5/blk00000003/sig0000011b" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk0000007a" (SFF) removed.
+The signal "filter5/dout<22>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk000000a7" (ROM) removed.
+  The signal "filter5/blk00000003/sig0000011a" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk00000079" (SFF) removed.
+The signal "filter5/dout<21>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk000000a8" (ROM) removed.
+  The signal "filter5/blk00000003/sig00000119" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk00000078" (SFF) removed.
+The signal "filter5/dout<20>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk000000a6" (ROM) removed.
+  The signal "filter5/blk00000003/sig00000118" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk00000077" (SFF) removed.
+The signal "filter5/dout<19>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk000000a5" (ROM) removed.
+  The signal "filter5/blk00000003/sig00000117" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk00000076" (SFF) removed.
+The signal "filter5/dout<18>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk000000a4" (ROM) removed.
+  The signal "filter5/blk00000003/sig00000116" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk00000075" (SFF) removed.
+The signal "filter5/dout<17>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk000000a2" (ROM) removed.
+  The signal "filter5/blk00000003/sig00000115" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk00000074" (SFF) removed.
+The signal "filter5/dout<16>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk000000a3" (ROM) removed.
+  The signal "filter5/blk00000003/sig00000114" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk00000073" (SFF) removed.
+The signal "filter5/dout<15>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk000000a1" (ROM) removed.
+  The signal "filter5/blk00000003/sig00000113" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk00000072" (SFF) removed.
+The signal "filter5/dout<14>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk0000009f" (ROM) removed.
+  The signal "filter5/blk00000003/sig00000112" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk00000071" (SFF) removed.
+The signal "filter5/dout<13>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk000000a0" (ROM) removed.
+  The signal "filter5/blk00000003/sig00000111" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk00000070" (SFF) removed.
+The signal "filter5/dout<12>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk0000009e" (ROM) removed.
+  The signal "filter5/blk00000003/sig00000110" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk0000006f" (SFF) removed.
+The signal "filter5/dout<11>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk0000009d" (ROM) removed.
+  The signal "filter5/blk00000003/sig0000010f" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk0000006e" (SFF) removed.
+The signal "filter5/dout<10>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk0000009c" (ROM) removed.
+  The signal "filter5/blk00000003/sig0000010e" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk0000006d" (SFF) removed.
+The signal "filter5/dout<9>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk0000009a" (ROM) removed.
+  The signal "filter5/blk00000003/sig0000010d" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk0000006c" (SFF) removed.
+The signal "filter5/dout<8>" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk0000009b" (ROM) removed.
+  The signal "filter5/blk00000003/sig0000010c" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk0000006b" (SFF) removed.
+The signal "filter5/blk00000003/sig0000000f" is sourceless and has been removed.
+ Sourceless block "filter5/blk00000003/blk000000ab" (ROM) removed.
+  The signal "filter5/blk00000003/sig0000011d" is sourceless and has been removed.
+   Sourceless block "filter5/blk00000003/blk0000007c" (SFF) removed.
+The signal "filter5/blk00000003/sig00000034" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig00000035" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig00000036" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig00000037" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig00000038" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig00000039" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig0000003a" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig0000003b" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig0000003c" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig0000003d" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig0000003e" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig0000003f" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig00000040" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig00000041" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig00000042" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig00000043" is sourceless and has been removed.
+The signal "filter5/blk00000003/sig00000044" is sourceless and has been removed.
+The signal "filter5/blk00000003/blk0000000a/LO" is sourceless and has been
+removed.
+The signal "filter5/blk00000003/blk0000002c/LO" is sourceless and has been
+removed.
+The signal "filter5/blk00000003/blk0000002c/O" is sourceless and has been
+removed.
+ Sourceless block "filter5/blk00000003/blk0000002c/MUXCY_D_BUF" (BUF) removed.
+The signal "filter5/blk00000003/blk0000003d/LO" is sourceless and has been
+removed.
+The signal "filter5/blk00000003/blk00000046/LO" is sourceless and has been
+removed.
+The signal "filter5/blk00000003/blk00000046/O" is sourceless and has been
+removed.
+ Sourceless block "filter5/blk00000003/blk00000046/MUXCY_D_BUF" (BUF) removed.
+The signal "filter5/blk00000003/blk00000050/LO" is sourceless and has been
+removed.
+The signal "filter5/blk00000003/blk00000050/O" is sourceless and has been
+removed.
+ Sourceless block "filter5/blk00000003/blk00000050/MUXCY_D_BUF" (BUF) removed.
+The signal "filter5/blk00000003/blk00000059/LO" is sourceless and has been
+removed.
+The signal "filter5/blk00000003/blk00000059/O" is sourceless and has been
+removed.
+ Sourceless block "filter5/blk00000003/blk00000059/MUXCY_D_BUF" (BUF) removed.
+The signal "filter4/rdy" is sourceless and has been removed.
+The signal "filter4/dout<24>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk000000aa" (ROM) removed.
+  The signal "filter4/blk00000003/sig0000011c" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk0000007b" (SFF) removed.
+The signal "filter4/dout<23>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk000000a9" (ROM) removed.
+  The signal "filter4/blk00000003/sig0000011b" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk0000007a" (SFF) removed.
+The signal "filter4/dout<22>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk000000a7" (ROM) removed.
+  The signal "filter4/blk00000003/sig0000011a" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk00000079" (SFF) removed.
+The signal "filter4/dout<21>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk000000a8" (ROM) removed.
+  The signal "filter4/blk00000003/sig00000119" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk00000078" (SFF) removed.
+The signal "filter4/dout<20>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk000000a6" (ROM) removed.
+  The signal "filter4/blk00000003/sig00000118" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk00000077" (SFF) removed.
+The signal "filter4/dout<19>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk000000a5" (ROM) removed.
+  The signal "filter4/blk00000003/sig00000117" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk00000076" (SFF) removed.
+The signal "filter4/dout<18>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk000000a4" (ROM) removed.
+  The signal "filter4/blk00000003/sig00000116" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk00000075" (SFF) removed.
+The signal "filter4/dout<17>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk000000a2" (ROM) removed.
+  The signal "filter4/blk00000003/sig00000115" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk00000074" (SFF) removed.
+The signal "filter4/dout<16>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk000000a3" (ROM) removed.
+  The signal "filter4/blk00000003/sig00000114" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk00000073" (SFF) removed.
+The signal "filter4/dout<15>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk000000a1" (ROM) removed.
+  The signal "filter4/blk00000003/sig00000113" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk00000072" (SFF) removed.
+The signal "filter4/dout<14>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk0000009f" (ROM) removed.
+  The signal "filter4/blk00000003/sig00000112" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk00000071" (SFF) removed.
+The signal "filter4/dout<13>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk000000a0" (ROM) removed.
+  The signal "filter4/blk00000003/sig00000111" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk00000070" (SFF) removed.
+The signal "filter4/dout<12>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk0000009e" (ROM) removed.
+  The signal "filter4/blk00000003/sig00000110" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk0000006f" (SFF) removed.
+The signal "filter4/dout<11>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk0000009d" (ROM) removed.
+  The signal "filter4/blk00000003/sig0000010f" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk0000006e" (SFF) removed.
+The signal "filter4/dout<10>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk0000009c" (ROM) removed.
+  The signal "filter4/blk00000003/sig0000010e" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk0000006d" (SFF) removed.
+The signal "filter4/dout<9>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk0000009a" (ROM) removed.
+  The signal "filter4/blk00000003/sig0000010d" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk0000006c" (SFF) removed.
+The signal "filter4/dout<8>" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk0000009b" (ROM) removed.
+  The signal "filter4/blk00000003/sig0000010c" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk0000006b" (SFF) removed.
+The signal "filter4/blk00000003/sig0000000f" is sourceless and has been removed.
+ Sourceless block "filter4/blk00000003/blk000000ab" (ROM) removed.
+  The signal "filter4/blk00000003/sig0000011d" is sourceless and has been removed.
+   Sourceless block "filter4/blk00000003/blk0000007c" (SFF) removed.
+The signal "filter4/blk00000003/sig00000034" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig00000035" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig00000036" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig00000037" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig00000038" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig00000039" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig0000003a" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig0000003b" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig0000003c" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig0000003d" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig0000003e" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig0000003f" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig00000040" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig00000041" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig00000042" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig00000043" is sourceless and has been removed.
+The signal "filter4/blk00000003/sig00000044" is sourceless and has been removed.
+The signal "filter4/blk00000003/blk0000000a/LO" is sourceless and has been
+removed.
+The signal "filter4/blk00000003/blk0000002c/LO" is sourceless and has been
+removed.
+The signal "filter4/blk00000003/blk0000002c/O" is sourceless and has been
+removed.
+ Sourceless block "filter4/blk00000003/blk0000002c/MUXCY_D_BUF" (BUF) removed.
+The signal "filter4/blk00000003/blk0000003d/LO" is sourceless and has been
+removed.
+The signal "filter4/blk00000003/blk00000046/LO" is sourceless and has been
+removed.
+The signal "filter4/blk00000003/blk00000046/O" is sourceless and has been
+removed.
+ Sourceless block "filter4/blk00000003/blk00000046/MUXCY_D_BUF" (BUF) removed.
+The signal "filter4/blk00000003/blk00000050/LO" is sourceless and has been
+removed.
+The signal "filter4/blk00000003/blk00000050/O" is sourceless and has been
+removed.
+ Sourceless block "filter4/blk00000003/blk00000050/MUXCY_D_BUF" (BUF) removed.
+The signal "filter4/blk00000003/blk00000059/LO" is sourceless and has been
+removed.
+The signal "filter4/blk00000003/blk00000059/O" is sourceless and has been
+removed.
+ Sourceless block "filter4/blk00000003/blk00000059/MUXCY_D_BUF" (BUF) removed.
+The signal "filter3/rdy" is sourceless and has been removed.
+The signal "filter3/dout<24>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk000000aa" (ROM) removed.
+  The signal "filter3/blk00000003/sig0000011c" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk0000007b" (SFF) removed.
+The signal "filter3/dout<23>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk000000a9" (ROM) removed.
+  The signal "filter3/blk00000003/sig0000011b" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk0000007a" (SFF) removed.
+The signal "filter3/dout<22>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk000000a7" (ROM) removed.
+  The signal "filter3/blk00000003/sig0000011a" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk00000079" (SFF) removed.
+The signal "filter3/dout<21>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk000000a8" (ROM) removed.
+  The signal "filter3/blk00000003/sig00000119" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk00000078" (SFF) removed.
+The signal "filter3/dout<20>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk000000a6" (ROM) removed.
+  The signal "filter3/blk00000003/sig00000118" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk00000077" (SFF) removed.
+The signal "filter3/dout<19>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk000000a5" (ROM) removed.
+  The signal "filter3/blk00000003/sig00000117" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk00000076" (SFF) removed.
+The signal "filter3/dout<18>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk000000a4" (ROM) removed.
+  The signal "filter3/blk00000003/sig00000116" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk00000075" (SFF) removed.
+The signal "filter3/dout<17>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk000000a2" (ROM) removed.
+  The signal "filter3/blk00000003/sig00000115" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk00000074" (SFF) removed.
+The signal "filter3/dout<16>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk000000a3" (ROM) removed.
+  The signal "filter3/blk00000003/sig00000114" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk00000073" (SFF) removed.
+The signal "filter3/dout<15>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk000000a1" (ROM) removed.
+  The signal "filter3/blk00000003/sig00000113" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk00000072" (SFF) removed.
+The signal "filter3/dout<14>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk0000009f" (ROM) removed.
+  The signal "filter3/blk00000003/sig00000112" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk00000071" (SFF) removed.
+The signal "filter3/dout<13>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk000000a0" (ROM) removed.
+  The signal "filter3/blk00000003/sig00000111" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk00000070" (SFF) removed.
+The signal "filter3/dout<12>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk0000009e" (ROM) removed.
+  The signal "filter3/blk00000003/sig00000110" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk0000006f" (SFF) removed.
+The signal "filter3/dout<11>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk0000009d" (ROM) removed.
+  The signal "filter3/blk00000003/sig0000010f" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk0000006e" (SFF) removed.
+The signal "filter3/dout<10>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk0000009c" (ROM) removed.
+  The signal "filter3/blk00000003/sig0000010e" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk0000006d" (SFF) removed.
+The signal "filter3/dout<9>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk0000009a" (ROM) removed.
+  The signal "filter3/blk00000003/sig0000010d" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk0000006c" (SFF) removed.
+The signal "filter3/dout<8>" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk0000009b" (ROM) removed.
+  The signal "filter3/blk00000003/sig0000010c" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk0000006b" (SFF) removed.
+The signal "filter3/blk00000003/sig0000000f" is sourceless and has been removed.
+ Sourceless block "filter3/blk00000003/blk000000ab" (ROM) removed.
+  The signal "filter3/blk00000003/sig0000011d" is sourceless and has been removed.
+   Sourceless block "filter3/blk00000003/blk0000007c" (SFF) removed.
+The signal "filter3/blk00000003/sig00000034" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig00000035" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig00000036" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig00000037" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig00000038" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig00000039" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig0000003a" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig0000003b" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig0000003c" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig0000003d" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig0000003e" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig0000003f" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig00000040" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig00000041" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig00000042" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig00000043" is sourceless and has been removed.
+The signal "filter3/blk00000003/sig00000044" is sourceless and has been removed.
+The signal "filter3/blk00000003/blk0000000a/LO" is sourceless and has been
+removed.
+The signal "filter3/blk00000003/blk0000002c/LO" is sourceless and has been
+removed.
+The signal "filter3/blk00000003/blk0000002c/O" is sourceless and has been
+removed.
+ Sourceless block "filter3/blk00000003/blk0000002c/MUXCY_D_BUF" (BUF) removed.
+The signal "filter3/blk00000003/blk0000003d/LO" is sourceless and has been
+removed.
+The signal "filter3/blk00000003/blk00000046/LO" is sourceless and has been
+removed.
+The signal "filter3/blk00000003/blk00000046/O" is sourceless and has been
+removed.
+ Sourceless block "filter3/blk00000003/blk00000046/MUXCY_D_BUF" (BUF) removed.
+The signal "filter3/blk00000003/blk00000050/LO" is sourceless and has been
+removed.
+The signal "filter3/blk00000003/blk00000050/O" is sourceless and has been
+removed.
+ Sourceless block "filter3/blk00000003/blk00000050/MUXCY_D_BUF" (BUF) removed.
+The signal "filter3/blk00000003/blk00000059/LO" is sourceless and has been
+removed.
+The signal "filter3/blk00000003/blk00000059/O" is sourceless and has been
+removed.
+ Sourceless block "filter3/blk00000003/blk00000059/MUXCY_D_BUF" (BUF) removed.
+The signal "filter2/rdy" is sourceless and has been removed.
+The signal "filter2/dout<24>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk000000aa" (ROM) removed.
+  The signal "filter2/blk00000003/sig0000011c" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk0000007b" (SFF) removed.
+The signal "filter2/dout<23>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk000000a9" (ROM) removed.
+  The signal "filter2/blk00000003/sig0000011b" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk0000007a" (SFF) removed.
+The signal "filter2/dout<22>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk000000a7" (ROM) removed.
+  The signal "filter2/blk00000003/sig0000011a" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk00000079" (SFF) removed.
+The signal "filter2/dout<21>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk000000a8" (ROM) removed.
+  The signal "filter2/blk00000003/sig00000119" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk00000078" (SFF) removed.
+The signal "filter2/dout<20>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk000000a6" (ROM) removed.
+  The signal "filter2/blk00000003/sig00000118" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk00000077" (SFF) removed.
+The signal "filter2/dout<19>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk000000a5" (ROM) removed.
+  The signal "filter2/blk00000003/sig00000117" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk00000076" (SFF) removed.
+The signal "filter2/dout<18>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk000000a4" (ROM) removed.
+  The signal "filter2/blk00000003/sig00000116" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk00000075" (SFF) removed.
+The signal "filter2/dout<17>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk000000a2" (ROM) removed.
+  The signal "filter2/blk00000003/sig00000115" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk00000074" (SFF) removed.
+The signal "filter2/dout<16>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk000000a3" (ROM) removed.
+  The signal "filter2/blk00000003/sig00000114" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk00000073" (SFF) removed.
+The signal "filter2/dout<15>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk000000a1" (ROM) removed.
+  The signal "filter2/blk00000003/sig00000113" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk00000072" (SFF) removed.
+The signal "filter2/dout<14>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk0000009f" (ROM) removed.
+  The signal "filter2/blk00000003/sig00000112" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk00000071" (SFF) removed.
+The signal "filter2/dout<13>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk000000a0" (ROM) removed.
+  The signal "filter2/blk00000003/sig00000111" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk00000070" (SFF) removed.
+The signal "filter2/dout<12>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk0000009e" (ROM) removed.
+  The signal "filter2/blk00000003/sig00000110" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk0000006f" (SFF) removed.
+The signal "filter2/dout<11>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk0000009d" (ROM) removed.
+  The signal "filter2/blk00000003/sig0000010f" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk0000006e" (SFF) removed.
+The signal "filter2/dout<10>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk0000009c" (ROM) removed.
+  The signal "filter2/blk00000003/sig0000010e" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk0000006d" (SFF) removed.
+The signal "filter2/dout<9>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk0000009a" (ROM) removed.
+  The signal "filter2/blk00000003/sig0000010d" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk0000006c" (SFF) removed.
+The signal "filter2/dout<8>" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk0000009b" (ROM) removed.
+  The signal "filter2/blk00000003/sig0000010c" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk0000006b" (SFF) removed.
+The signal "filter2/blk00000003/sig0000000f" is sourceless and has been removed.
+ Sourceless block "filter2/blk00000003/blk000000ab" (ROM) removed.
+  The signal "filter2/blk00000003/sig0000011d" is sourceless and has been removed.
+   Sourceless block "filter2/blk00000003/blk0000007c" (SFF) removed.
+The signal "filter2/blk00000003/sig00000034" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig00000035" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig00000036" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig00000037" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig00000038" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig00000039" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig0000003a" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig0000003b" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig0000003c" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig0000003d" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig0000003e" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig0000003f" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig00000040" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig00000041" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig00000042" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig00000043" is sourceless and has been removed.
+The signal "filter2/blk00000003/sig00000044" is sourceless and has been removed.
+The signal "filter2/blk00000003/blk0000000a/LO" is sourceless and has been
+removed.
+The signal "filter2/blk00000003/blk0000002c/LO" is sourceless and has been
+removed.
+The signal "filter2/blk00000003/blk0000002c/O" is sourceless and has been
+removed.
+ Sourceless block "filter2/blk00000003/blk0000002c/MUXCY_D_BUF" (BUF) removed.
+The signal "filter2/blk00000003/blk0000003d/LO" is sourceless and has been
+removed.
+The signal "filter2/blk00000003/blk00000046/LO" is sourceless and has been
+removed.
+The signal "filter2/blk00000003/blk00000046/O" is sourceless and has been
+removed.
+ Sourceless block "filter2/blk00000003/blk00000046/MUXCY_D_BUF" (BUF) removed.
+The signal "filter2/blk00000003/blk00000050/LO" is sourceless and has been
+removed.
+The signal "filter2/blk00000003/blk00000050/O" is sourceless and has been
+removed.
+ Sourceless block "filter2/blk00000003/blk00000050/MUXCY_D_BUF" (BUF) removed.
+The signal "filter2/blk00000003/blk00000059/LO" is sourceless and has been
+removed.
+The signal "filter2/blk00000003/blk00000059/O" is sourceless and has been
+removed.
+ Sourceless block "filter2/blk00000003/blk00000059/MUXCY_D_BUF" (BUF) removed.
+The signal "filter1/rdy" is sourceless and has been removed.
+The signal "filter1/dout<24>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk000000aa" (ROM) removed.
+  The signal "filter1/blk00000003/sig0000011c" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk0000007b" (SFF) removed.
+The signal "filter1/dout<23>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk000000a9" (ROM) removed.
+  The signal "filter1/blk00000003/sig0000011b" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk0000007a" (SFF) removed.
+The signal "filter1/dout<22>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk000000a7" (ROM) removed.
+  The signal "filter1/blk00000003/sig0000011a" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk00000079" (SFF) removed.
+The signal "filter1/dout<21>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk000000a8" (ROM) removed.
+  The signal "filter1/blk00000003/sig00000119" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk00000078" (SFF) removed.
+The signal "filter1/dout<20>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk000000a6" (ROM) removed.
+  The signal "filter1/blk00000003/sig00000118" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk00000077" (SFF) removed.
+The signal "filter1/dout<19>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk000000a5" (ROM) removed.
+  The signal "filter1/blk00000003/sig00000117" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk00000076" (SFF) removed.
+The signal "filter1/dout<18>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk000000a4" (ROM) removed.
+  The signal "filter1/blk00000003/sig00000116" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk00000075" (SFF) removed.
+The signal "filter1/dout<17>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk000000a2" (ROM) removed.
+  The signal "filter1/blk00000003/sig00000115" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk00000074" (SFF) removed.
+The signal "filter1/dout<16>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk000000a3" (ROM) removed.
+  The signal "filter1/blk00000003/sig00000114" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk00000073" (SFF) removed.
+The signal "filter1/dout<15>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk000000a1" (ROM) removed.
+  The signal "filter1/blk00000003/sig00000113" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk00000072" (SFF) removed.
+The signal "filter1/dout<14>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk0000009f" (ROM) removed.
+  The signal "filter1/blk00000003/sig00000112" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk00000071" (SFF) removed.
+The signal "filter1/dout<13>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk000000a0" (ROM) removed.
+  The signal "filter1/blk00000003/sig00000111" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk00000070" (SFF) removed.
+The signal "filter1/dout<12>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk0000009e" (ROM) removed.
+  The signal "filter1/blk00000003/sig00000110" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk0000006f" (SFF) removed.
+The signal "filter1/dout<11>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk0000009d" (ROM) removed.
+  The signal "filter1/blk00000003/sig0000010f" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk0000006e" (SFF) removed.
+The signal "filter1/dout<10>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk0000009c" (ROM) removed.
+  The signal "filter1/blk00000003/sig0000010e" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk0000006d" (SFF) removed.
+The signal "filter1/dout<9>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk0000009a" (ROM) removed.
+  The signal "filter1/blk00000003/sig0000010d" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk0000006c" (SFF) removed.
+The signal "filter1/dout<8>" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk0000009b" (ROM) removed.
+  The signal "filter1/blk00000003/sig0000010c" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk0000006b" (SFF) removed.
+The signal "filter1/blk00000003/sig0000000f" is sourceless and has been removed.
+ Sourceless block "filter1/blk00000003/blk000000ab" (ROM) removed.
+  The signal "filter1/blk00000003/sig0000011d" is sourceless and has been removed.
+   Sourceless block "filter1/blk00000003/blk0000007c" (SFF) removed.
+The signal "filter1/blk00000003/sig00000034" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig00000035" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig00000036" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig00000037" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig00000038" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig00000039" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig0000003a" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig0000003b" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig0000003c" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig0000003d" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig0000003e" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig0000003f" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig00000040" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig00000041" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig00000042" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig00000043" is sourceless and has been removed.
+The signal "filter1/blk00000003/sig00000044" is sourceless and has been removed.
+The signal "filter1/blk00000003/blk0000000a/LO" is sourceless and has been
+removed.
+The signal "filter1/blk00000003/blk0000002c/LO" is sourceless and has been
+removed.
+The signal "filter1/blk00000003/blk0000002c/O" is sourceless and has been
+removed.
+ Sourceless block "filter1/blk00000003/blk0000002c/MUXCY_D_BUF" (BUF) removed.
+The signal "filter1/blk00000003/blk0000003d/LO" is sourceless and has been
+removed.
+The signal "filter1/blk00000003/blk00000046/LO" is sourceless and has been
+removed.
+The signal "filter1/blk00000003/blk00000046/O" is sourceless and has been
+removed.
+ Sourceless block "filter1/blk00000003/blk00000046/MUXCY_D_BUF" (BUF) removed.
+The signal "filter1/blk00000003/blk00000050/LO" is sourceless and has been
+removed.
+The signal "filter1/blk00000003/blk00000050/O" is sourceless and has been
+removed.
+ Sourceless block "filter1/blk00000003/blk00000050/MUXCY_D_BUF" (BUF) removed.
+The signal "filter1/blk00000003/blk00000059/LO" is sourceless and has been
+removed.
+The signal "filter1/blk00000003/blk00000059/O" is sourceless and has been
+removed.
+ Sourceless block "filter1/blk00000003/blk00000059/MUXCY_D_BUF" (BUF) removed.
+The signal "filter0/rdy" is sourceless and has been removed.
+The signal "filter0/dout<24>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk000000aa" (ROM) removed.
+  The signal "filter0/blk00000003/sig0000011c" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk0000007b" (SFF) removed.
+The signal "filter0/dout<23>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk000000a9" (ROM) removed.
+  The signal "filter0/blk00000003/sig0000011b" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk0000007a" (SFF) removed.
+The signal "filter0/dout<22>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk000000a7" (ROM) removed.
+  The signal "filter0/blk00000003/sig0000011a" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk00000079" (SFF) removed.
+The signal "filter0/dout<21>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk000000a8" (ROM) removed.
+  The signal "filter0/blk00000003/sig00000119" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk00000078" (SFF) removed.
+The signal "filter0/dout<20>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk000000a6" (ROM) removed.
+  The signal "filter0/blk00000003/sig00000118" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk00000077" (SFF) removed.
+The signal "filter0/dout<19>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk000000a5" (ROM) removed.
+  The signal "filter0/blk00000003/sig00000117" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk00000076" (SFF) removed.
+The signal "filter0/dout<18>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk000000a4" (ROM) removed.
+  The signal "filter0/blk00000003/sig00000116" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk00000075" (SFF) removed.
+The signal "filter0/dout<17>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk000000a2" (ROM) removed.
+  The signal "filter0/blk00000003/sig00000115" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk00000074" (SFF) removed.
+The signal "filter0/dout<16>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk000000a3" (ROM) removed.
+  The signal "filter0/blk00000003/sig00000114" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk00000073" (SFF) removed.
+The signal "filter0/dout<15>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk000000a1" (ROM) removed.
+  The signal "filter0/blk00000003/sig00000113" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk00000072" (SFF) removed.
+The signal "filter0/dout<14>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk0000009f" (ROM) removed.
+  The signal "filter0/blk00000003/sig00000112" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk00000071" (SFF) removed.
+The signal "filter0/dout<13>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk000000a0" (ROM) removed.
+  The signal "filter0/blk00000003/sig00000111" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk00000070" (SFF) removed.
+The signal "filter0/dout<12>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk0000009e" (ROM) removed.
+  The signal "filter0/blk00000003/sig00000110" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk0000006f" (SFF) removed.
+The signal "filter0/dout<11>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk0000009d" (ROM) removed.
+  The signal "filter0/blk00000003/sig0000010f" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk0000006e" (SFF) removed.
+The signal "filter0/dout<10>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk0000009c" (ROM) removed.
+  The signal "filter0/blk00000003/sig0000010e" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk0000006d" (SFF) removed.
+The signal "filter0/dout<9>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk0000009a" (ROM) removed.
+  The signal "filter0/blk00000003/sig0000010d" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk0000006c" (SFF) removed.
+The signal "filter0/dout<8>" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk0000009b" (ROM) removed.
+  The signal "filter0/blk00000003/sig0000010c" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk0000006b" (SFF) removed.
+The signal "filter0/blk00000003/sig0000000f" is sourceless and has been removed.
+ Sourceless block "filter0/blk00000003/blk000000ab" (ROM) removed.
+  The signal "filter0/blk00000003/sig0000011d" is sourceless and has been removed.
+   Sourceless block "filter0/blk00000003/blk0000007c" (SFF) removed.
+The signal "filter0/blk00000003/sig00000034" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig00000035" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig00000036" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig00000037" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig00000038" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig00000039" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig0000003a" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig0000003b" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig0000003c" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig0000003d" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig0000003e" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig0000003f" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig00000040" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig00000041" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig00000042" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig00000043" is sourceless and has been removed.
+The signal "filter0/blk00000003/sig00000044" is sourceless and has been removed.
+The signal "filter0/blk00000003/blk0000000a/LO" is sourceless and has been
+removed.
+The signal "filter0/blk00000003/blk0000002c/LO" is sourceless and has been
+removed.
+The signal "filter0/blk00000003/blk0000002c/O" is sourceless and has been
+removed.
+ Sourceless block "filter0/blk00000003/blk0000002c/MUXCY_D_BUF" (BUF) removed.
+The signal "filter0/blk00000003/blk0000003d/LO" is sourceless and has been
+removed.
+The signal "filter0/blk00000003/blk00000046/LO" is sourceless and has been
+removed.
+The signal "filter0/blk00000003/blk00000046/O" is sourceless and has been
+removed.
+ Sourceless block "filter0/blk00000003/blk00000046/MUXCY_D_BUF" (BUF) removed.
+The signal "filter0/blk00000003/blk00000050/LO" is sourceless and has been
+removed.
+The signal "filter0/blk00000003/blk00000050/O" is sourceless and has been
+removed.
+ Sourceless block "filter0/blk00000003/blk00000050/MUXCY_D_BUF" (BUF) removed.
+The signal "filter0/blk00000003/blk00000059/LO" is sourceless and has been
+removed.
+The signal "filter0/blk00000003/blk00000059/O" is sourceless and has been
+removed.
+ Sourceless block "filter0/blk00000003/blk00000059/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter0/blk00000001" (ONE) removed.
+Unused block "filter0/blk00000002" (ZERO) removed.
+Unused block "filter0/blk00000003/blk0000000a/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter0/blk00000003/blk00000017" (FF) removed.
+Unused block "filter0/blk00000003/blk0000002c" (MUX) removed.
+Unused block "filter0/blk00000003/blk0000003d/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter0/blk00000003/blk00000046" (MUX) removed.
+Unused block "filter0/blk00000003/blk00000050" (MUX) removed.
+Unused block "filter0/blk00000003/blk00000059" (MUX) removed.
+Unused block "filter1/blk00000001" (ONE) removed.
+Unused block "filter1/blk00000002" (ZERO) removed.
+Unused block "filter1/blk00000003/blk0000000a/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter1/blk00000003/blk00000017" (FF) removed.
+Unused block "filter1/blk00000003/blk0000002c" (MUX) removed.
+Unused block "filter1/blk00000003/blk0000003d/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter1/blk00000003/blk00000046" (MUX) removed.
+Unused block "filter1/blk00000003/blk00000050" (MUX) removed.
+Unused block "filter1/blk00000003/blk00000059" (MUX) removed.
+Unused block "filter10/blk00000001" (ONE) removed.
+Unused block "filter10/blk00000002" (ZERO) removed.
+Unused block "filter10/blk00000003/blk0000000a/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter10/blk00000003/blk00000017" (FF) removed.
+Unused block "filter10/blk00000003/blk0000002c" (MUX) removed.
+Unused block "filter10/blk00000003/blk0000003d/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter10/blk00000003/blk00000046" (MUX) removed.
+Unused block "filter10/blk00000003/blk00000050" (MUX) removed.
+Unused block "filter10/blk00000003/blk00000059" (MUX) removed.
+Unused block "filter11/blk00000001" (ONE) removed.
+Unused block "filter11/blk00000002" (ZERO) removed.
+Unused block "filter11/blk00000003/blk0000000a/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter11/blk00000003/blk00000017" (FF) removed.
+Unused block "filter11/blk00000003/blk0000002c" (MUX) removed.
+Unused block "filter11/blk00000003/blk0000003d/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter11/blk00000003/blk00000046" (MUX) removed.
+Unused block "filter11/blk00000003/blk00000050" (MUX) removed.
+Unused block "filter11/blk00000003/blk00000059" (MUX) removed.
+Unused block "filter2/blk00000001" (ONE) removed.
+Unused block "filter2/blk00000002" (ZERO) removed.
+Unused block "filter2/blk00000003/blk0000000a/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter2/blk00000003/blk00000017" (FF) removed.
+Unused block "filter2/blk00000003/blk0000002c" (MUX) removed.
+Unused block "filter2/blk00000003/blk0000003d/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter2/blk00000003/blk00000046" (MUX) removed.
+Unused block "filter2/blk00000003/blk00000050" (MUX) removed.
+Unused block "filter2/blk00000003/blk00000059" (MUX) removed.
+Unused block "filter3/blk00000001" (ONE) removed.
+Unused block "filter3/blk00000002" (ZERO) removed.
+Unused block "filter3/blk00000003/blk0000000a/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter3/blk00000003/blk00000017" (FF) removed.
+Unused block "filter3/blk00000003/blk0000002c" (MUX) removed.
+Unused block "filter3/blk00000003/blk0000003d/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter3/blk00000003/blk00000046" (MUX) removed.
+Unused block "filter3/blk00000003/blk00000050" (MUX) removed.
+Unused block "filter3/blk00000003/blk00000059" (MUX) removed.
+Unused block "filter4/blk00000001" (ONE) removed.
+Unused block "filter4/blk00000002" (ZERO) removed.
+Unused block "filter4/blk00000003/blk0000000a/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter4/blk00000003/blk00000017" (FF) removed.
+Unused block "filter4/blk00000003/blk0000002c" (MUX) removed.
+Unused block "filter4/blk00000003/blk0000003d/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter4/blk00000003/blk00000046" (MUX) removed.
+Unused block "filter4/blk00000003/blk00000050" (MUX) removed.
+Unused block "filter4/blk00000003/blk00000059" (MUX) removed.
+Unused block "filter5/blk00000001" (ONE) removed.
+Unused block "filter5/blk00000002" (ZERO) removed.
+Unused block "filter5/blk00000003/blk0000000a/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter5/blk00000003/blk00000017" (FF) removed.
+Unused block "filter5/blk00000003/blk0000002c" (MUX) removed.
+Unused block "filter5/blk00000003/blk0000003d/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter5/blk00000003/blk00000046" (MUX) removed.
+Unused block "filter5/blk00000003/blk00000050" (MUX) removed.
+Unused block "filter5/blk00000003/blk00000059" (MUX) removed.
+Unused block "filter6/blk00000001" (ONE) removed.
+Unused block "filter6/blk00000002" (ZERO) removed.
+Unused block "filter6/blk00000003/blk0000000a/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter6/blk00000003/blk00000017" (FF) removed.
+Unused block "filter6/blk00000003/blk0000002c" (MUX) removed.
+Unused block "filter6/blk00000003/blk0000003d/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter6/blk00000003/blk00000046" (MUX) removed.
+Unused block "filter6/blk00000003/blk00000050" (MUX) removed.
+Unused block "filter6/blk00000003/blk00000059" (MUX) removed.
+Unused block "filter7/blk00000001" (ONE) removed.
+Unused block "filter7/blk00000002" (ZERO) removed.
+Unused block "filter7/blk00000003/blk0000000a/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter7/blk00000003/blk00000017" (FF) removed.
+Unused block "filter7/blk00000003/blk0000002c" (MUX) removed.
+Unused block "filter7/blk00000003/blk0000003d/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter7/blk00000003/blk00000046" (MUX) removed.
+Unused block "filter7/blk00000003/blk00000050" (MUX) removed.
+Unused block "filter7/blk00000003/blk00000059" (MUX) removed.
+Unused block "filter8/blk00000001" (ONE) removed.
+Unused block "filter8/blk00000002" (ZERO) removed.
+Unused block "filter8/blk00000003/blk0000000a/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter8/blk00000003/blk00000017" (FF) removed.
+Unused block "filter8/blk00000003/blk0000002c" (MUX) removed.
+Unused block "filter8/blk00000003/blk0000003d/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter8/blk00000003/blk00000046" (MUX) removed.
+Unused block "filter8/blk00000003/blk00000050" (MUX) removed.
+Unused block "filter8/blk00000003/blk00000059" (MUX) removed.
+Unused block "filter9/blk00000001" (ONE) removed.
+Unused block "filter9/blk00000002" (ZERO) removed.
+Unused block "filter9/blk00000003/blk0000000a/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter9/blk00000003/blk00000017" (FF) removed.
+Unused block "filter9/blk00000003/blk0000002c" (MUX) removed.
+Unused block "filter9/blk00000003/blk0000003d/MUXCY_D_BUF" (BUF) removed.
+Unused block "filter9/blk00000003/blk00000046" (MUX) removed.
+Unused block "filter9/blk00000003/blk00000050" (MUX) removed.
+Unused block "filter9/blk00000003/blk00000059" (MUX) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		Zelda/XST_GND
+VCC 		Zelda/XST_VCC
+GND 		filter0/blk00000003/blk00000004
+VCC 		filter0/blk00000003/blk00000005
+FDE 		filter0/blk00000003/blk00000019
+   optimized to 0
+FDE 		filter0/blk00000003/blk0000001a
+   optimized to 0
+FDE 		filter0/blk00000003/blk0000001b
+   optimized to 0
+FDE 		filter0/blk00000003/blk0000001c
+   optimized to 0
+VCC 		filter0/blk00000003/blk0000005f/blk00000060
+GND 		filter0/blk00000003/blk0000005f/blk00000061
+GND 		filter1/blk00000003/blk00000004
+VCC 		filter1/blk00000003/blk00000005
+FDE 		filter1/blk00000003/blk00000019
+   optimized to 0
+FDE 		filter1/blk00000003/blk0000001a
+   optimized to 0
+FDE 		filter1/blk00000003/blk0000001b
+   optimized to 0
+VCC 		filter1/blk00000003/blk0000005f/blk00000060
+GND 		filter1/blk00000003/blk0000005f/blk00000061
+GND 		filter10/blk00000003/blk00000004
+VCC 		filter10/blk00000003/blk00000005
+FDE 		filter10/blk00000003/blk0000001a
+   optimized to 0
+FDE 		filter10/blk00000003/blk0000001c
+   optimized to 0
+VCC 		filter10/blk00000003/blk0000005f/blk00000060
+GND 		filter10/blk00000003/blk0000005f/blk00000061
+GND 		filter11/blk00000003/blk00000004
+VCC 		filter11/blk00000003/blk00000005
+FDE 		filter11/blk00000003/blk0000001a
+   optimized to 0
+VCC 		filter11/blk00000003/blk0000005f/blk00000060
+GND 		filter11/blk00000003/blk0000005f/blk00000061
+GND 		filter2/blk00000003/blk00000004
+VCC 		filter2/blk00000003/blk00000005
+FDE 		filter2/blk00000003/blk00000019
+   optimized to 0
+FDE 		filter2/blk00000003/blk0000001a
+   optimized to 0
+FDE 		filter2/blk00000003/blk0000001c
+   optimized to 0
+VCC 		filter2/blk00000003/blk0000005f/blk00000060
+GND 		filter2/blk00000003/blk0000005f/blk00000061
+GND 		filter3/blk00000003/blk00000004
+VCC 		filter3/blk00000003/blk00000005
+FDE 		filter3/blk00000003/blk00000019
+   optimized to 0
+FDE 		filter3/blk00000003/blk0000001a
+   optimized to 0
+VCC 		filter3/blk00000003/blk0000005f/blk00000060
+GND 		filter3/blk00000003/blk0000005f/blk00000061
+GND 		filter4/blk00000003/blk00000004
+VCC 		filter4/blk00000003/blk00000005
+FDE 		filter4/blk00000003/blk00000019
+   optimized to 0
+FDE 		filter4/blk00000003/blk0000001b
+   optimized to 0
+FDE 		filter4/blk00000003/blk0000001c
+   optimized to 0
+VCC 		filter4/blk00000003/blk0000005f/blk00000060
+GND 		filter4/blk00000003/blk0000005f/blk00000061
+GND 		filter5/blk00000003/blk00000004
+VCC 		filter5/blk00000003/blk00000005
+FDE 		filter5/blk00000003/blk00000019
+   optimized to 0
+FDE 		filter5/blk00000003/blk0000001b
+   optimized to 0
+VCC 		filter5/blk00000003/blk0000005f/blk00000060
+GND 		filter5/blk00000003/blk0000005f/blk00000061
+GND 		filter6/blk00000003/blk00000004
+VCC 		filter6/blk00000003/blk00000005
+FDE 		filter6/blk00000003/blk00000019
+   optimized to 0
+FDE 		filter6/blk00000003/blk0000001c
+   optimized to 0
+VCC 		filter6/blk00000003/blk0000005f/blk00000060
+GND 		filter6/blk00000003/blk0000005f/blk00000061
+GND 		filter7/blk00000003/blk00000004
+VCC 		filter7/blk00000003/blk00000005
+FDE 		filter7/blk00000003/blk00000019
+   optimized to 0
+VCC 		filter7/blk00000003/blk0000005f/blk00000060
+GND 		filter7/blk00000003/blk0000005f/blk00000061
+GND 		filter8/blk00000003/blk00000004
+VCC 		filter8/blk00000003/blk00000005
+FDE 		filter8/blk00000003/blk0000001a
+   optimized to 0
+FDE 		filter8/blk00000003/blk0000001b
+   optimized to 0
+FDE 		filter8/blk00000003/blk0000001c
+   optimized to 0
+VCC 		filter8/blk00000003/blk0000005f/blk00000060
+GND 		filter8/blk00000003/blk0000005f/blk00000061
+GND 		filter9/blk00000003/blk00000004
+VCC 		filter9/blk00000003/blk00000005
+FDE 		filter9/blk00000003/blk0000001a
+   optimized to 0
+FDE 		filter9/blk00000003/blk0000001b
+   optimized to 0
+VCC 		filter9/blk00000003/blk0000005f/blk00000060
+GND 		filter9/blk00000003/blk0000005f/blk00000061
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| audioOut<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| audioOut<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| audioOut<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| audioOut<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| audioOut<4>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| audioOut<5>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| audioOut<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| audioOut<7>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| audioOut<8>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| audioOut<9>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| audioOut<10>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| audioOut<11>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

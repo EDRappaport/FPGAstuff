@@ -1,0 +1,133 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Wed Apr  2 13:42:52 2014
+# Process ID: 22313
+# Log file: /home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/planAhead_run_1/planAhead.log
+# Journal file: /home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+INFO: [Common 17-81] Feature available: PartialReconfiguration
+source {/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/pa.fromNetlist.tcl}
+# create_project -name audioControl -dir "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/planAhead_run_1" -part xc6slx9tqg144-2
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 2682.930 ; gain = 12.016
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl} {ipcore_dir} }
+# add_files [list {ipcore_dir/FIR.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/musicStorage.ncf}] -fileset [get_property constrset [current_run]]
+# set_property target_constrs_file "constraints.ucf" [current_fileset -constrset]
+Adding file '/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/constraints.ucf' to fileset 'constrs_1'
+# add_files [list {constraints.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6slx9tqg144-2
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design main.ngc ...
+WARNING:NetListWriters:298 - No output is written to main.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file main.edif ...
+ngc2edif: Total memory usage is 104532 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/audioControl.data/cache/main_ngc_cb0f928a.edif]
+Finished Parsing EDIF File [./planAhead_run_1/audioControl.data/cache/main_ngc_cb0f928a.edif]
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design FIR.ngc ...
+WARNING:NetListWriters:298 - No output is written to FIR.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file FIR.edif ...
+ngc2edif: Total memory usage is 104768 kilobytes
+
+Reading core file '/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ngc' for (cell view 'FIR', library 'main_lib', file 'main.ngc')
+Parsing EDIF File [./planAhead_run_1/audioControl.data/cache/FIR_ngc_65dd8d71.edif]
+Finished Parsing EDIF File [./planAhead_run_1/audioControl.data/cache/FIR_ngc_65dd8d71.edif]
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design musicStorage.ngc ...
+WARNING:NetListWriters:298 - No output is written to musicStorage.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file musicStorage.edif ...
+ngc2edif: Total memory usage is 104688 kilobytes
+
+Reading core file '/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/musicStorage.ngc' for (cell view 'musicStorage', library 'main_lib', file 'main.ngc')
+Parsing EDIF File [./planAhead_run_1/audioControl.data/cache/musicStorage_ngc_65dd8d71.edif]
+Finished Parsing EDIF File [./planAhead_run_1/audioControl.data/cache/musicStorage_ngc_65dd8d71.edif]
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockBuffers.xml
+Loading package pin functions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx9/tqg144/Package.xml
+Loading io standards from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Finished Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Finished Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Finished Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Finished Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Finished Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Finished Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Finished Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Finished Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Finished Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Finished Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Finished Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Finished Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.ncf]
+Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/musicStorage.ncf]
+Finished Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/musicStorage.ncf]
+Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/constraints.ucf]
+Finished Parsing UCF File [/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/constraints.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 1 instances
+
+Phase 0 | Netlist Checksum: 88d2885d
+link_design: Time (s): cpu = 00:00:48 ; elapsed = 00:01:10 . Memory (MB): peak = 2850.477 ; gain = 161.539
+exit
+ERROR: [#UNDEF] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+ (See /home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/planAhead_pid22313.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Wed Apr  2 13:46:28 2014...
+INFO: [Common 17-83] Releasing license: PlanAhead

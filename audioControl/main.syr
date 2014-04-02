@@ -1,0 +1,567 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/FIR.vhd" into library work
+Parsing entity <FIR>.
+Parsing architecture <FIR_a> of entity <fir>.
+Parsing VHDL file "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/ipcore_dir/musicStorage.vhd" into library work
+Parsing entity <musicStorage>.
+Parsing architecture <musicStorage_a> of entity <musicstorage>.
+Parsing VHDL file "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/Signed2Logic.vhd" into library work
+Parsing entity <Signed2Logic>.
+Parsing architecture <Behavioral> of entity <signed2logic>.
+Parsing VHDL file "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/MyDac.vhd" into library work
+Parsing entity <MyDAC>.
+Parsing architecture <Behavioral> of entity <mydac>.
+Parsing VHDL file "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/Logic2Signed.vhd" into library work
+Parsing entity <Logic2Signed>.
+Parsing architecture <Behavioral> of entity <logic2signed>.
+Parsing VHDL file "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.vhd" into library work
+Parsing entity <main>.
+Parsing architecture <Behavioral> of entity <main>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <main> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <musicStorage> (architecture <musicStorage_a>) from library <work>.
+
+Elaborating entity <Logic2Signed> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <FIR> (architecture <FIR_a>) from library <work>.
+
+Elaborating entity <Signed2Logic> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <MyDAC> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:92 - "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.vhd" Line 248: count should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <main>.
+    Related source file is "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.vhd".
+INFO:Xst:3210 - "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.vhd" line 137: Output port <rdy> of the instance <filter0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.vhd" line 138: Output port <rdy> of the instance <filter1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.vhd" line 139: Output port <rdy> of the instance <filter2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.vhd" line 140: Output port <rdy> of the instance <filter3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.vhd" line 141: Output port <rdy> of the instance <filter4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.vhd" line 142: Output port <rdy> of the instance <filter5> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.vhd" line 143: Output port <rdy> of the instance <filter6> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.vhd" line 144: Output port <rdy> of the instance <filter7> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.vhd" line 145: Output port <rdy> of the instance <filter8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.vhd" line 146: Output port <rdy> of the instance <filter9> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.vhd" line 147: Output port <rdy> of the instance <filter10> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.vhd" line 148: Output port <rdy> of the instance <filter11> is unconnected or connected to loadless signal.
+    Found 16-bit adder for signal <count[15]_GND_6_o_add_14_OUT> created at line 248.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 Latch(s).
+	inferred  12 Multiplexer(s).
+Unit <main> synthesized.
+
+Synthesizing Unit <Logic2Signed>.
+    Related source file is "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/Logic2Signed.vhd".
+        BitWidth = 8
+    Found 9-bit subtractor for signal <x_signed> created at line 23.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Logic2Signed> synthesized.
+
+Synthesizing Unit <Signed2Logic>.
+    Related source file is "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/Signed2Logic.vhd".
+        BitWidth = 8
+    Found 9-bit adder for signal <y_signed> created at line 28.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Signed2Logic> synthesized.
+
+Synthesizing Unit <MyDAC>.
+    Related source file is "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/MyDac.vhd".
+        BitWidth = 8
+    Found 9-bit register for signal <sum>.
+    Found 9-bit adder for signal <GND_39_o_GND_39_o_add_0_OUT> created at line 30.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+Unit <MyDAC> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 26
+ 16-bit adder                                          : 1
+ 9-bit adder                                           : 24
+ 9-bit subtractor                                      : 1
+# Registers                                            : 12
+ 9-bit register                                        : 12
+# Latches                                              : 16
+ 1-bit latch                                           : 16
+# Multiplexers                                         : 12
+ 8-bit 2-to-1 multiplexer                              : 12
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/musicStorage.ngc>.
+Reading core <ipcore_dir/FIR.ngc>.
+Loading core <musicStorage> for timing and area information for instance <Zelda>.
+Loading core <FIR> for timing and area information for instance <filter0>.
+Loading core <FIR> for timing and area information for instance <filter1>.
+Loading core <FIR> for timing and area information for instance <filter2>.
+Loading core <FIR> for timing and area information for instance <filter3>.
+Loading core <FIR> for timing and area information for instance <filter4>.
+Loading core <FIR> for timing and area information for instance <filter5>.
+Loading core <FIR> for timing and area information for instance <filter6>.
+Loading core <FIR> for timing and area information for instance <filter7>.
+Loading core <FIR> for timing and area information for instance <filter8>.
+Loading core <FIR> for timing and area information for instance <filter9>.
+Loading core <FIR> for timing and area information for instance <filter10>.
+Loading core <FIR> for timing and area information for instance <filter11>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 26
+ 16-bit adder                                          : 1
+ 8-bit adder                                           : 12
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 12
+# Registers                                            : 108
+ Flip-Flops                                            : 108
+# Multiplexers                                         : 12
+ 8-bit 2-to-1 multiplexer                              : 12
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <main> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 11.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 108
+ Flip-Flops                                            : 108
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2070
+#      GND                         : 26
+#      INV                         : 2
+#      LUT1                        : 278
+#      LUT2                        : 75
+#      LUT3                        : 432
+#      LUT4                        : 120
+#      LUT5                        : 36
+#      LUT6                        : 24
+#      MUXCY                       : 171
+#      MUXCY_D                     : 72
+#      MUXCY_L                     : 312
+#      VCC                         : 26
+#      XORCY                       : 496
+# FlipFlops/Latches                : 1234
+#      FD                          : 540
+#      FDE                         : 246
+#      FDRE                        : 408
+#      FDSE                        : 24
+#      LD                          : 16
+# RAMS                             : 29
+#      RAMB16BWER                  : 28
+#      RAMB8BWER                   : 1
+# Shift Registers                  : 192
+#      SRLC16E                     : 192
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 13
+#      IBUF                        : 1
+#      OBUF                        : 12
+# DSPs                             : 12
+#      DSP48A1                     : 12
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1234  out of  11440    10%  
+ Number of Slice LUTs:                 1159  out of   5720    20%  
+    Number used as Logic:               967  out of   5720    16%  
+    Number used as Memory:              192  out of   1440    13%  
+       Number used as SRL:              192
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1310
+   Number with an unused Flip Flop:      76  out of   1310     5%  
+   Number with an unused LUT:           151  out of   1310    11%  
+   Number of fully used LUT-FF pairs:  1083  out of   1310    82%  
+   Number of unique control sets:        51
+
+IO Utilization: 
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    102    13%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               29  out of     32    90%  
+    Number using Block RAM only:         29
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                     12  out of     16    75%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                 | Clock buffer(FF name)                                                                                                           | Load  |
+-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------+
+rfd[11]_PWR_6_o_equal_14_o(rfd[11]_PWR_6_o_equal_14_o<11>3:O)| NONE(*)(count_13)                                                                                                               | 16    |
+clk                                                          | BUFGP                                                                                                                           | 1451  |
+Zelda/N1                                                     | NONE(Zelda/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram)| 17    |
+-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.732ns (Maximum Frequency: 174.459MHz)
+   Minimum input arrival time before clock: 4.727ns
+   Maximum output required time after clock: 4.118ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'rfd[11]_PWR_6_o_equal_14_o'
+  Clock period: 2.853ns (frequency: 350.570MHz)
+  Total number of paths / destination ports: 136 / 16
+-------------------------------------------------------------------------
+Delay:               2.853ns (Levels of Logic = 17)
+  Source:            count_0 (LATCH)
+  Destination:       count_15 (LATCH)
+  Source Clock:      rfd[11]_PWR_6_o_equal_14_o falling
+  Destination Clock: rfd[11]_PWR_6_o_equal_14_o falling
+
+  Data Path: count_0 to count_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              18   0.581   1.234  count_0 (count_0)
+     INV:I->O              1   0.255   0.000  Madd_count[15]_GND_6_o_add_14_OUT_lut<0>_INV_0 (Madd_count[15]_GND_6_o_add_14_OUT_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  Madd_count[15]_GND_6_o_add_14_OUT_cy<0> (Madd_count[15]_GND_6_o_add_14_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_count[15]_GND_6_o_add_14_OUT_cy<1> (Madd_count[15]_GND_6_o_add_14_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_count[15]_GND_6_o_add_14_OUT_cy<2> (Madd_count[15]_GND_6_o_add_14_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_count[15]_GND_6_o_add_14_OUT_cy<3> (Madd_count[15]_GND_6_o_add_14_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_count[15]_GND_6_o_add_14_OUT_cy<4> (Madd_count[15]_GND_6_o_add_14_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_count[15]_GND_6_o_add_14_OUT_cy<5> (Madd_count[15]_GND_6_o_add_14_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_count[15]_GND_6_o_add_14_OUT_cy<6> (Madd_count[15]_GND_6_o_add_14_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_count[15]_GND_6_o_add_14_OUT_cy<7> (Madd_count[15]_GND_6_o_add_14_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_count[15]_GND_6_o_add_14_OUT_cy<8> (Madd_count[15]_GND_6_o_add_14_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_count[15]_GND_6_o_add_14_OUT_cy<9> (Madd_count[15]_GND_6_o_add_14_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_count[15]_GND_6_o_add_14_OUT_cy<10> (Madd_count[15]_GND_6_o_add_14_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_count[15]_GND_6_o_add_14_OUT_cy<11> (Madd_count[15]_GND_6_o_add_14_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_count[15]_GND_6_o_add_14_OUT_cy<12> (Madd_count[15]_GND_6_o_add_14_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_count[15]_GND_6_o_add_14_OUT_cy<13> (Madd_count[15]_GND_6_o_add_14_OUT_cy<13>)
+     MUXCY:CI->O           0   0.023   0.000  Madd_count[15]_GND_6_o_add_14_OUT_cy<14> (Madd_count[15]_GND_6_o_add_14_OUT_cy<14>)
+     XORCY:CI->O           1   0.206   0.000  Madd_count[15]_GND_6_o_add_14_OUT_xor<15> (count[15]_GND_6_o_add_14_OUT<15>)
+     LD:D                      0.036          count_15
+    ----------------------------------------
+    Total                      2.853ns (1.619ns logic, 1.234ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.732ns (frequency: 174.459MHz)
+  Total number of paths / destination ports: 16668 / 2280
+-------------------------------------------------------------------------
+Delay:               5.732ns (Levels of Logic = 4)
+  Source:            Zelda/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram (RAM)
+  Destination:       filter11/blk00000003/blk000000ee (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Zelda/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram to filter11/blk00000003/blk000000ee
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKA->DOA0    1   2.100   0.958  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.ram_douta)
+     LUT6:I2->O           13   0.254   1.097  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux81 (douta<7>)
+     end scope: 'Zelda:douta<7>'
+     INV:I->O             12   0.255   1.068  L2S/Msub_x_signed_Madd_xor<7>11_INV_0 (signedMusic<7>)
+     begin scope: 'filter11:din<7>'
+     begin scope: 'filter11/blk00000003:din(7)'
+     SRLC16E:D                -0.060          blk000000ee
+    ----------------------------------------
+    Total                      5.732ns (2.609ns logic, 3.123ns route)
+                                       (45.5% logic, 54.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 528 / 108
+-------------------------------------------------------------------------
+Offset:              4.727ns (Levels of Logic = 10)
+  Source:            switch (PAD)
+  Destination:       DAC11/sum_8 (FF)
+  Destination Clock: clk rising
+
+  Data Path: switch to DAC11/sum_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            96   1.328   2.454  switch_IBUF (switch_IBUF)
+     LUT4:I0->O            1   0.254   0.000  DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_lut<0> (DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<0> (DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<1> (DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<2> (DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<3> (DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<4> (DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<5> (DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<6> (DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<6>)
+     MUXCY:CI->O           1   0.262   0.000  DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<7> (DAC11/Madd_GND_39_o_GND_39_o_add_0_OUT_cy<7>)
+     FD:D                      0.074          DAC11/sum_8
+    ----------------------------------------
+    Total                      4.727ns (2.273ns logic, 2.454ns route)
+                                       (48.1% logic, 51.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            DAC11/sum_8 (FF)
+  Destination:       audioOut<11> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: DAC11/sum_8 to audioOut<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.525   0.681  DAC11/sum_8 (DAC11/sum_8)
+     OBUF:I->O                 2.912          audioOut_11_OBUF (audioOut<11>)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+clk                       |    5.732|         |         |         |
+rfd[11]_PWR_6_o_equal_14_o|         |    3.427|         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rfd[11]_PWR_6_o_equal_14_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+rfd[11]_PWR_6_o_equal_14_o|         |         |    2.853|         |
+--------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 15.20 secs
+ 
+--> 
+
+
+Total memory usage is 396892 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+
