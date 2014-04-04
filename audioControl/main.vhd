@@ -15,7 +15,9 @@ entity main is
 Port(
 	clk : in std_logic;
 	switch : in std_logic;
-	audioOut : out std_logic_vector (11 downto 0)
+	LED : out std_logic;
+	--audioOut : out std_logic_vector (11 downto 0)
+	audioOut : out std_logic_vector (5 downto 0)
 );
 end main;
 
@@ -25,7 +27,7 @@ constant M : integer := 8; -- M <=12
 
 -- memory block where audio is currently stored
 -- may eventually come from actual audio source
-COMPONENT musicStorage --There are 65,536 samples
+COMPONENT musicStorage
   PORT (
     clka : IN STD_LOGIC;
     addra : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -78,7 +80,8 @@ end component;
 -- ... selectedOuputx -> musicOutputx -> audioOut
 --
 	
-	signal rfd				: std_logic_vector(11 downto 0); --signal for FIR
+	--signal rfd				: std_logic_vector(11 downto 0); --signal for FIR
+	signal rfd				: std_logic_vector(5 downto 0); --signal for FIR
 	signal rdy				: std_logic_vector(11 downto 0); --signal for FIR
 	signal rawMusic		: std_logic_vector(M-1 downto 0) := (others => '0'); --x unsigned
 	signal signedMusic	: std_logic_vector(M-1 downto 0) := (others => '0'); --x1 signed music signal
@@ -140,12 +143,12 @@ filter2 : FIR port map(clk, std_logic_vector(to_unsigned(2, 4)), rfd(2), rdy(2),
 filter3 : FIR port map(clk, std_logic_vector(to_unsigned(3, 4)), rfd(3), rdy(3), selectedData, filteredOutput3);
 filter4 : FIR port map(clk, std_logic_vector(to_unsigned(4, 4)), rfd(4), rdy(4), selectedData, filteredOutput4);
 filter5 : FIR port map(clk, std_logic_vector(to_unsigned(5, 4)), rfd(5), rdy(5), selectedData, filteredOutput5);
-filter6 : FIR port map(clk, std_logic_vector(to_unsigned(6, 4)), rfd(6), rdy(6), selectedData, filteredOutput6);
-filter7 : FIR port map(clk, std_logic_vector(to_unsigned(7, 4)), rfd(7), rdy(7), selectedData, filteredOutput7);
-filter8 : FIR port map(clk, std_logic_vector(to_unsigned(8, 4)), rfd(8), rdy(8), selectedData, filteredOutput8);
-filter9 : FIR port map(clk, std_logic_vector(to_unsigned(9, 4)), rfd(9), rdy(9), selectedData, filteredOutput9);
-filter10 : FIR port map(clk, std_logic_vector(to_unsigned(10, 4)), rfd(10), rdy(10), selectedData, filteredOutput10);
-filter11 : FIR port map(clk, std_logic_vector(to_unsigned(11, 4)), rfd(11), rdy(11), selectedData, filteredOutput11);
+--filter6 : FIR port map(clk, std_logic_vector(to_unsigned(6, 4)), rfd(6), rdy(6), selectedData, filteredOutput6);
+--filter7 : FIR port map(clk, std_logic_vector(to_unsigned(7, 4)), rfd(7), rdy(7), selectedData, filteredOutput7);
+--filter8 : FIR port map(clk, std_logic_vector(to_unsigned(8, 4)), rfd(8), rdy(8), selectedData, filteredOutput8);
+--filter9 : FIR port map(clk, std_logic_vector(to_unsigned(9, 4)), rfd(9), rdy(9), selectedData, filteredOutput9);
+--filter10 : FIR port map(clk, std_logic_vector(to_unsigned(10, 4)), rfd(10), rdy(10), selectedData, filteredOutput10);
+--filter11 : FIR port map(clk, std_logic_vector(to_unsigned(11, 4)), rfd(11), rdy(11), selectedData, filteredOutput11);
 
 -- 12 Signed2Logic
 converter0 : Signed2Logic
@@ -166,24 +169,24 @@ converter4 : Signed2Logic
 converter5 : Signed2Logic
 	Generic map(M)
 	port map(selectedOutput5, musicOutput5);
-converter6 : Signed2Logic
-	Generic map(M)
-	port map(selectedOutput6, musicOutput6);
-converter7 : Signed2Logic
-	Generic map(M)
-	port map(selectedOutput7, musicOutput7);
-converter8 : Signed2Logic
-	Generic map(M)
-	port map(selectedOutput8, musicOutput8);
-converter9 : Signed2Logic
-	Generic map(M)
-	port map(selectedOutput9, musicOutput9);
-converter10 : Signed2Logic
-	Generic map(M)
-	port map(selectedOutput10, musicOutput10);
-converter11 : Signed2Logic
-	Generic map(M)
-	port map(selectedOutput11, musicOutput11);
+--converter6 : Signed2Logic
+--	Generic map(M)
+--	port map(selectedOutput6, musicOutput6);
+--converter7 : Signed2Logic
+--	Generic map(M)
+--	port map(selectedOutput7, musicOutput7);
+--converter8 : Signed2Logic
+--	Generic map(M)
+--	port map(selectedOutput8, musicOutput8);
+--converter9 : Signed2Logic
+--	Generic map(M)
+--	port map(selectedOutput9, musicOutput9);
+--converter10 : Signed2Logic
+--	Generic map(M)
+--	port map(selectedOutput10, musicOutput10);
+--converter11 : Signed2Logic
+--	Generic map(M)
+--	port map(selectedOutput11, musicOutput11);
 
 -- 12 D to A Converters
 DAC0 : MyDac
@@ -204,47 +207,50 @@ DAC4 : MyDac
 DAC5 : MyDac
 	Generic map(M)
 	port map(clk, musicOutput5, audioOut(5));
-DAC6 : MyDac
-	Generic map(M)
-	port map(clk, musicOutput6, audioOut(6));
-DAC7 : MyDac
-	Generic map(M)
-	port map(clk, musicOutput7, audioOut(7));
-DAC8 : MyDac
-	Generic map(M)
-	port map(clk, musicOutput8, audioOut(8));
-DAC9 : MyDac
-	Generic map(M)
-	port map(clk, musicOutput9, audioOut(9));
-DAC10 : MyDac
-	Generic map(M)
-	port map(clk, musicOutput10, audioOut(10));
-DAC11 : MyDac
-	Generic map(M)
-	port map(clk, musicOutput11, audioOut(11));
+--DAC6 : MyDac
+--	Generic map(M)
+--	port map(clk, musicOutput6, audioOut(6));
+--DAC7 : MyDac
+--	Generic map(M)
+--	port map(clk, musicOutput7, audioOut(7));
+--DAC8 : MyDac
+--	Generic map(M)
+--	port map(clk, musicOutput8, audioOut(8));
+--DAC9 : MyDac
+--	Generic map(M)
+--	port map(clk, musicOutput9, audioOut(9));
+--DAC10 : MyDac
+--	Generic map(M)
+--	port map(clk, musicOutput10, audioOut(10));
+--DAC11 : MyDac
+--	Generic map(M)
+--	port map(clk, musicOutput11, audioOut(11));
 
 
 selectedData <= signedMusic;
 
 -- decide between output from filter and untouched input
-selectedOutput0 <= filteredOutput0(7 downto 0) when switch = '1' else selectedData;
-selectedOutput1 <= filteredOutput1(7 downto 0) when switch = '1' else selectedData;
-selectedOutput2 <= filteredOutput2(7 downto 0) when switch = '1' else selectedData;
-selectedOutput3 <= filteredOutput3(7 downto 0) when switch = '1' else selectedData;
-selectedOutput4 <= filteredOutput4(7 downto 0) when switch = '1' else selectedData;
-selectedOutput5 <= filteredOutput5(7 downto 0) when switch = '1' else selectedData;
-selectedOutput6 <= filteredOutput6(7 downto 0) when switch = '1' else selectedData;
-selectedOutput7 <= filteredOutput7(7 downto 0) when switch = '1' else selectedData;
-selectedOutput8 <= filteredOutput8(7 downto 0) when switch = '1' else selectedData;
-selectedOutput9 <= filteredOutput9(7 downto 0) when switch = '1' else selectedData;
-selectedOutput10 <= filteredOutput10(7 downto 0) when switch = '1' else selectedData;
-selectedOutput11 <= filteredOutput11(7 downto 0) when switch = '1' else selectedData;
+selectedOutput0 <= filteredOutput0(24 downto 17) when switch = '1' else selectedData;
+selectedOutput1 <= filteredOutput1(24 downto 17) when switch = '1' else selectedData;
+selectedOutput2 <= filteredOutput2(24 downto 17) when switch = '1' else selectedData;
+selectedOutput3 <= filteredOutput3(24 downto 17) when switch = '1' else selectedData;
+selectedOutput4 <= filteredOutput4(24 downto 17) when switch = '1' else selectedData;
+selectedOutput5 <= filteredOutput5(24 downto 17) when switch = '1' else selectedData;
+--selectedOutput6 <= filteredOutput6(7 downto 0) when switch = '1' else selectedData;
+--selectedOutput7 <= filteredOutput7(7 downto 0) when switch = '1' else selectedData;
+--selectedOutput8 <= filteredOutput8(7 downto 0) when switch = '1' else selectedData;
+--selectedOutput9 <= filteredOutput9(7 downto 0) when switch = '1' else selectedData;
+--selectedOutput10 <= filteredOutput10(7 downto 0) when switch = '1' else selectedData;
+--selectedOutput11 <= filteredOutput11(7 downto 0) when switch = '1' else selectedData;
 
 
-process(rfd)
+process(rfd(0))
 begin
 	--if ((rfd(0) & rfd(1) & rfd(2) & rfd(3) & rfd(4) & rfd(5) & rfd(6) & rfd(7) & rfd(8) & rfd(9) & rfd(10) & rfd(11)) == '1') then
-	if (rfd = "111111111111") then
+	--if (rfd = "111111111111") then
+	--if (rfd = "11") then
+	if rising_edge(rfd(0)) then --and rising_edge(rfd(1)) then -- and rising_edge(rfd(2)) and rising_edge(rfd(3)) then -- and rising_edge(rfd(4))  and rising_edge(rfd(5))  and rising_edge(rfd(6))  and rising_edge(rfd(7))  and rising_edge(rfd(8)) and rising_edge(rfd(9))  and rising_edge(rfd(10))  and rising_edge(rfd(11))  then
+		LED <= '0';
 		count <= count+1;
 	end if;
 end process;

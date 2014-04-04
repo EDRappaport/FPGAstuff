@@ -32,3 +32,187 @@ map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -reg
 par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
 trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
 bitgen -intstyle ise -f main.ut main.ncd 
+netgen -intstyle ise -rpw 100 -tpw 0 -ar Structure -tm main -w -dir netgen/translate -ofmt vhdl -sim main.ngd main_translate.vhd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.xst" -ofn "/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/audioControl/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc constraints.ucf -p xc6slx9-tqg144-2 "main.ngc" main.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f main.ut main.ncd 

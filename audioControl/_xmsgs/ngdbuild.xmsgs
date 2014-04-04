@@ -5,24 +5,6 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">filter11/blk00000003/blk0000000f</arg>&apos; has unconnected output pin
-</msg>
-
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">filter10/blk00000003/blk0000000f</arg>&apos; has unconnected output pin
-</msg>
-
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">filter9/blk00000003/blk0000000f</arg>&apos; has unconnected output pin
-</msg>
-
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">filter8/blk00000003/blk0000000f</arg>&apos; has unconnected output pin
-</msg>
-
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">filter7/blk00000003/blk0000000f</arg>&apos; has unconnected output pin
-</msg>
-
-<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">filter6/blk00000003/blk0000000f</arg>&apos; has unconnected output pin
-</msg>
-
 <msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">filter5/blk00000003/blk0000000f</arg>&apos; has unconnected output pin
 </msg>
 

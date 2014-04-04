@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="FIR">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2014-4-2T15:20:13</timestamp>
+    <timestamp>2014-4-4T0:11:15</timestamp>
     <pin polarity="Input" x="0" y="80" name="din[7:0]" />
     <pin polarity="Input" x="0" y="784" name="filter_sel[3:0]" />
     <pin polarity="Input" x="0" y="1008" name="clk" />
