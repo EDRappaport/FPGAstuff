@@ -1,0 +1,4 @@
+vhdl work "ipcore_dir/musicStorage.vhd"
+vhdl work "ipcore_dir/dcm.vhd"
+vhdl work "MyDac.vhd"
+vhdl work "main.vhd"

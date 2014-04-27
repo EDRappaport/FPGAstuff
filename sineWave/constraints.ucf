@@ -1,0 +1,12 @@
+NET clk LOC = "P94" 	| IOSTANDARD = LVCMOS25 ;
+
+NET audioOut(0) LOC = "P61";
+NET audioOut(1) LOC = "P66";
+NET audioOut(2) LOC = "P93";
+NET audioOut(3) LOC = "P88";
+NET audioOut(4) LOC = "P85";
+NET audioOut(5) LOC = "P83";
+NET audioOut(6) LOC = "P81";
+NET audioOut(7) LOC = "P79";
+NET audioOut(8) LOC = "P75";
+NET audioOut(9) LOC = "P67";

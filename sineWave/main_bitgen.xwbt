@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/sineWave/main.ncd
+OUTFILE=/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/sineWave/main.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/elli/Documents/Dropbox/The Cooper Union/Senior Project/FPGA/sineWave
+LICENSE=WebPack
+USER_INFO=210849933_0_0_313
